@@ -1,0 +1,28 @@
+/* Shavi Tantra — Design Tokens
+   Paleta y familias tipográficas de marca, extraídas de index.html (:root). */
+:root{
+  /* Fondos */
+  --cream:#f6f0e6;
+  --lino:#ece3d4;
+  --sand:#e3d6c1;
+
+  /* Texto */
+  --ink:#3d342a;
+  --ink-soft:#6f6353;
+
+  /* Dorado de marca */
+  --gold:#b08a4f;
+  --gold-deep:#8a6a37;
+
+  /* Líneas / bordes */
+  --line:rgba(176,138,79,.30);
+
+  /* Layout */
+  --maxw:900px;
+
+  /* Tipografía */
+  --font-title:'Arsenica','Cormorant Garamond',Georgia,serif;
+  --font-head: 'Arsenica','Marcellus',Georgia,serif;
+  --font-body: 'Cormorant',Georgia,serif;
+  --font-ui:   'Arsenica','Cormorant Garamond',Georgia,serif;
+}

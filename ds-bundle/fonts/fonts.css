@@ -1,0 +1,16 @@
+/* Shavi Tantra — Fuentes de marca */
+
+/* Arsenica (fuente de marca; versión Trial, CC BY-NC) */
+@font-face{
+  font-family:'Arsenica';
+  src:url('../fonts/Arsenica-Regular.woff2') format('woff2');
+  font-weight:normal;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'Arsenica';
+  src:url('../fonts/Arsenica-Bold.woff2') format('woff2');
+  font-weight:bold;font-style:normal;font-display:swap;
+}
+
+/* Cormorant + Cormorant Garamond (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap');

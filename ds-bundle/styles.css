@@ -1,0 +1,20 @@
+/* Shavi Tantra — Brand Style Kit
+   Entry point: import this file in any Claude Design project to get
+   Shavi's full token set + typography. */
+
+@import './fonts/fonts.css';
+@import './tokens/tokens.css';
+
+/* Base reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:1.18rem;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
