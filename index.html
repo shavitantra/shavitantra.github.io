@@ -3,6 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Set <html lang> ASAP from lang or saved preference (a11y / screen readers). -->
+<script>
+(function () {
+  let allowed = { es: 1, en: 1, de: 1 };
+  try {
+    let q = new URLSearchParams(location.search).get("lang");
+    if (q) {
+      q = String(q).toLowerCase().slice(0, 2);
+      if (allowed[q]) { document.documentElement.lang = q; return; }
+    }
+    let stored = localStorage.getItem("lang");
+    if (stored && allowed[stored]) document.documentElement.lang = stored;
+  } catch (e) {
+    console.error(e);
+  }
+})();
+</script>
 <title>Shavi · Masaje Tántrico en Cala d'Or, Mallorca</title>
 <meta name="description" content="Masaje tántrico con Shavi en Cala d'Or, Mallorca. Sesiones en espacio propio o a domicilio. Yoga del tacto, respiración consciente y presencia.">
 <link rel="icon" type="image/png" href="img/logo.png">
@@ -35,7 +52,7 @@
   body{
     background:var(--cream);
     color:var(--ink);
-    font-family:var(--font-body);
+    font-family:var(--font-body),serif;
     font-size:1.18rem;
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
@@ -45,12 +62,23 @@
 
   /* NAV */
   nav{position:sticky;top:0;z-index:20;background:rgba(246,240,230,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:var(--font-title);font-size:1.5rem;letter-spacing:.18em;text-transform:none;color:var(--gold-deep);text-decoration:none}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--font-title),serif;font-size:1.5rem;letter-spacing:.18em;text-transform:none;color:var(--gold-deep);text-decoration:none;flex-shrink:0}
   .brand img{height:36px;width:auto;display:block}
-  .nav-links{display:flex;gap:26px;font-family:var(--font-ui);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+  .nav-right{display:flex;align-items:center;gap:22px}
+  .nav-links{display:flex;gap:26px;font-family:var(--font-ui),serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
   .nav-links a{color:var(--ink-soft);text-decoration:none;transition:color .2s}
   .nav-links a:hover{color:var(--gold-deep)}
+  .lang-switch{display:flex;align-items:center;gap:2px;font-family:var(--font-ui),serif;font-size:.72rem;letter-spacing:.1em}
+  .lang-switch button{
+    appearance:none;background:transparent;border:1px solid transparent;border-radius:2px;
+    color:var(--ink-soft);cursor:pointer;padding:5px 7px;font:inherit;letter-spacing:inherit;
+    transition:color .2s,border-color .2s,background .2s;
+  }
+  .lang-switch button:hover{color:var(--gold-deep)}
+  .lang-switch button[aria-pressed="true"]{
+    color:var(--gold-deep);border-color:var(--line);background:rgba(176,138,79,.08);
+  }
   @media(max-width:640px){.nav-links{display:none}}
 
   /* HERO */
@@ -60,20 +88,20 @@
   }
   .hero-inner{background:rgba(246,240,230,.72);backdrop-filter:blur(3px);padding:48px 46px;border:1px solid var(--line);border-radius:4px;max-width:640px;margin:0 24px}
   .hero-logo{display:block;height:120px;width:auto;margin:0 auto 18px}
-  .hero h1{font-family:var(--font-title);font-weight:400;font-size:4rem;letter-spacing:.14em;text-transform:none;color:var(--gold-deep);line-height:1}
+  .hero h1{font-family:var(--font-title),serif;font-weight:400;font-size:4rem;letter-spacing:.14em;text-transform:none;color:var(--gold-deep);line-height:1}
   @media(max-width:640px){.hero-logo{height:92px}}
-  .hero .tag{font-family:var(--font-ui);color:var(--ink-soft);letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;margin-top:18px}
+  .hero .tag{font-family:var(--font-ui),serif;color:var(--ink-soft);letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;margin-top:18px}
   .hero .quote{font-style:italic;color:var(--ink-soft);font-size:1.25rem;margin-top:26px}
   .hero .quote small{display:block;margin-top:6px;font-style:normal;letter-spacing:.12em;font-size:.72rem;text-transform:uppercase}
-  .cta{display:inline-block;margin-top:30px;font-family:var(--font-ui);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;padding:15px 38px;background:var(--gold-deep);color:var(--cream);text-decoration:none;border-radius:2px;transition:background .25s}
+  .cta{display:inline-block;margin-top:30px;font-family:var(--font-ui),serif;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;padding:15px 38px;background:var(--gold-deep);color:var(--cream);text-decoration:none;border-radius:2px;transition:background .25s}
   .cta:hover{background:var(--ink)}
   @media(max-width:640px){.hero h1{font-size:2.6rem}.hero-inner{padding:34px 26px}}
 
   /* SECCIONES */
   section{padding:84px 0;border-bottom:1px solid var(--line)}
   section:nth-of-type(even){background:var(--lino)}
-  .eyebrow{font-family:var(--font-ui);color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;text-align:center;margin-bottom:14px}
-  h2{font-family:var(--font-head);text-align:center;font-weight:400;font-size:2.3rem;letter-spacing:.04em;margin-bottom:38px;color:var(--ink)}
+  .eyebrow{font-family:var(--font-ui),serif;color:var(--gold);letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;text-align:center;margin-bottom:14px}
+  h2{font-family:var(--font-head),serif;text-align:center;font-weight:400;font-size:2.3rem;letter-spacing:.04em;margin-bottom:38px;color:var(--ink)}
   p{margin-bottom:20px}
   .lead{font-size:1.28rem;color:var(--ink-soft);text-align:center;max-width:660px;margin:0 auto 22px;font-style:italic}
 
@@ -93,9 +121,9 @@
   .tarifa{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:36px 28px;text-align:center;transition:transform .2s,box-shadow .2s}
   section:nth-of-type(even) .tarifa{background:#fbf7ef}
   .tarifa:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(61,52,42,.14)}
-  .tarifa h3{font-family:var(--font-head);font-weight:400;font-size:1.4rem;color:var(--gold-deep);margin-bottom:8px}
-  .tarifa .dur{font-family:var(--font-body);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:20px}
-  .tarifa .precio{font-family:var(--font-body);font-size:2.6rem;color:var(--ink);line-height:1}
+  .tarifa h3{font-family:var(--font-head),serif;font-weight:400;font-size:1.4rem;color:var(--gold-deep);margin-bottom:8px}
+  .tarifa .dur{font-family:var(--font-body),serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:20px}
+  .tarifa .precio{font-family:var(--font-body),serif;font-size:2.6rem;color:var(--ink);line-height:1}
   .tarifa .precio span{font-size:1rem;color:var(--ink-soft)}
   .tarifa p{font-size:1.02rem;color:var(--ink-soft);margin-top:18px;margin-bottom:0}
   .tarifas-nota{text-align:center;color:var(--ink-soft);font-size:1rem;margin-top:30px;font-style:italic}
@@ -103,10 +131,10 @@
   /* CONTACTO */
   .contacto{text-align:center}
   .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px}
-  .btn2{font-family:var(--font-ui);font-size:.82rem;letter-spacing:.1em;padding:14px 30px;border:1px solid var(--gold);border-radius:2px;text-decoration:none;color:var(--gold-deep);transition:all .25s}
+  .btn2{font-family:var(--font-ui),serif;font-size:.82rem;letter-spacing:.1em;padding:14px 30px;border:1px solid var(--gold);border-radius:2px;text-decoration:none;color:var(--gold-deep);transition:all .25s}
   .btn2:hover{background:var(--gold-deep);color:var(--cream);border-color:var(--gold-deep)}
 
-  footer{padding:46px 0;text-align:center;color:var(--ink-soft);font-family:var(--font-body);font-size:.78rem;letter-spacing:.05em;background:var(--sand)}
+  footer{padding:46px 0;text-align:center;color:var(--ink-soft);font-family:var(--font-body),serif;font-size:.78rem;letter-spacing:.05em;background:var(--sand)}
   footer a{color:var(--gold-deep);text-decoration:none}
 </style>
 </head>
@@ -115,12 +143,19 @@
 <nav>
   <div class="wrap">
     <a class="brand" href="#"><img src="img/logo.png" alt="Logo Shavi Tantra"><span>Shavi</span></a>
-    <div class="nav-links">
-      <a href="#sobre">Sobre mí</a>
-      <a href="#masaje">El masaje</a>
-      <a href="#lugar">El lugar</a>
-      <a href="#tarifas">Tarifas</a>
-      <a href="#contacto">Contacto</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#sobre" data-i18n="nav.sobre">Sobre mí</a>
+        <a href="#masaje" data-i18n="nav.masaje">El masaje</a>
+        <a href="#lugar" data-i18n="nav.lugar">El lugar</a>
+        <a href="#tarifas" data-i18n="nav.tarifas">Tarifas</a>
+        <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+      </div>
+      <div class="lang-switch">
+        <button type="button" data-lang="es" aria-pressed="true" title="Español">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
+        <button type="button" data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
+      </div>
     </div>
   </div>
 </nav>
@@ -129,25 +164,25 @@
   <div class="hero-inner">
     <img class="hero-logo" src="img/logo.png" alt="Logo Shavi Tantra">
     <h1>Shavi</h1>
-    <div class="tag">Masaje Tántrico · Cala d'Or, Mallorca</div>
-    <p class="quote">"Todos los caminos auténticos llevan a la misma realidad última."
+    <div class="tag" data-i18n="hero.tag">Masaje Tántrico · Cala d'Or, Mallorca</div>
+    <p class="quote"><span data-i18n="hero.quote">"Todos los caminos auténticos llevan a la misma realidad última."</span>
       <small>— Ramakrishna</small></p>
-    <a class="cta" href="#contacto">Reservar una sesión</a>
+    <a class="cta" href="#contacto" data-i18n="hero.cta">Reservar una sesión</a>
   </div>
 </header>
 
 <!-- SOBRE MÍ -->
 <section id="sobre">
   <div class="wrap">
-    <div class="eyebrow">Sobre mí</div>
-    <h2>Presencia, tacto y consciencia</h2>
+    <div class="eyebrow" data-i18n="sobre.eyebrow">Sobre mí</div>
+    <h2 data-i18n="sobre.h2">Presencia, tacto y consciencia</h2>
     <div class="two">
-      <img src="img/retrato.jpg" alt="Shavi en meditación junto al mar en Cala d'Or">
+      <img src="img/retrato.jpg" alt="Shavi en meditación junto al mar en Cala d'Or" data-i18n-alt="sobre.alt">
       <div>
-        <p>Soy Shavi. Acompaño a personas a reconectar con su cuerpo a través del masaje
+        <p data-i18n="sobre.p1">Soy Shavi. Acompaño a personas a reconectar con su cuerpo a través del masaje
           tántrico, una práctica que integra todos los aspectos del ser humano: físico,
           energético, emocional, mental y también sexual.</p>
-        <p>Me formé en la <a href="https://vermakalavati.com/" target="_blank" rel="noopener">Escuela Verma Kalavati</a>,
+        <p data-i18n-html="sobre.p2">Me formé en la <a href="https://vermakalavati.com/" target="_blank" rel="noopener">Escuela Verma Kalavati</a>,
            y trabajo desde el respeto absoluto, la escucha y la presencia. Mi espacio está en Cala d'Or, Mallorca: un lugar
           tranquilo, pensado para que puedas soltar y habitar el momento.</p>
       </div>
@@ -158,14 +193,14 @@
 <!-- EL MASAJE -->
 <section id="masaje">
   <div class="wrap">
-    <div class="eyebrow">El masaje</div>
-    <h2>El Yoga del Tacto</h2>
-    <p class="lead">Un toque vacío de intención que lleva presencia a cada zona del cuerpo.</p>
-    <p>A través del toque consciente, y apoyándonos en la respiración, llevamos presencia a
+    <div class="eyebrow" data-i18n="masaje.eyebrow">El masaje</div>
+    <h2 data-i18n="masaje.h2">El Yoga del Tacto</h2>
+    <p class="lead" data-i18n="masaje.lead">Un toque vacío de intención que lleva presencia a cada zona del cuerpo.</p>
+    <p data-i18n="masaje.p1">A través del toque consciente, y apoyándonos en la respiración, llevamos presencia a
       cada zona del cuerpo, relajándola y devolviéndole flexibilidad y vitalidad. Así se
       deshacen tensiones y nudos energéticos, y se facilita la libre circulación de la
       energía por todo el cuerpo.</p>
-    <p>Esto genera una gran relajación física y mental. Con ayuda de la respiración, la
+    <p data-i18n="masaje.p2">Esto genera una gran relajación física y mental. Con ayuda de la respiración, la
       energía que se despierta durante la sesión se expande por el cuerpo a través del canal
       central hasta el corazón, restableciendo el vínculo entre la sexualidad y el afecto, y
       facilitando estados expandidos de consciencia y profunda meditación.</p>
@@ -176,9 +211,9 @@
 <section id="lugar" class="lugar">
   <div class="banner">
     <div class="box">
-      <div class="eyebrow">El lugar</div>
-      <h2>Cala d'Or · Mallorca</h2>
-      <p>Entre calas de agua turquesa y pinares, al sureste de Mallorca. Un entorno sereno
+      <div class="eyebrow" data-i18n="lugar.eyebrow">El lugar</div>
+      <h2 data-i18n="lugar.h2">Cala d'Or · Mallorca</h2>
+      <p data-i18n="lugar.p">Entre calas de agua turquesa y pinares, al sureste de Mallorca. Un entorno sereno
         que forma parte de la experiencia: la calma del mar acompaña el trabajo del cuerpo.</p>
     </div>
   </div>
@@ -187,30 +222,30 @@
 <!-- ============= SECCIÓN TARIFAS — LOS PRECIOS ============= -->
 <section id="tarifas">
   <div class="wrap">
-    <div class="eyebrow">Tarifas</div>
-    <h2>Sesiones</h2>
-    <p class="lead">Precios orientativos. Ajusta libremente importes y duraciones.</p>
+    <div class="eyebrow" data-i18n="tarifas.eyebrow">Tarifas</div>
+    <h2 data-i18n="tarifas.h2">Sesiones</h2>
+    <p class="lead" data-i18n="tarifas.lead">Precios orientativos.</p>
     <div class="tarifas">
       <div class="tarifa">
-        <h3>Masaje de Respiración Profunda</h3>
-        <div class="dur">90 minutos</div>
+        <h3 data-i18n="tarifa1.h3">Masaje de Respiración Profunda</h3>
+        <div class="dur" data-i18n="tarifa1.dur">90 minutos</div>
         <div class="precio">90€</div>
-        <p>Primera toma de contacto. Conversación previa, escucha y masaje completo.</p>
+        <p data-i18n="tarifa1.p">Primera toma de contacto. Conversación previa, escucha y masaje completo.</p>
       </div>
       <div class="tarifa">
-        <h3>Masaje Tántrico</h3>
-        <div class="dur">120 minutos</div>
+        <h3 data-i18n="tarifa2.h3">Masaje Tántrico</h3>
+        <div class="dur" data-i18n="tarifa2.dur">120 minutos</div>
         <div class="precio">160€</div>
-        <p>La experiencia completa, para profundizar en el trabajo corporal y energético.</p>
+        <p data-i18n="tarifa2.p">La experiencia completa, para profundizar en el trabajo corporal y energético.</p>
       </div>
       <div class="tarifa">
-        <h3>Masaje Tántrico <br>(a domicilio)</h3>
-        <div class="dur">120 minutos</div>
+        <h3 data-i18n-html="tarifa3.h3">Masaje Tántrico <br>(a domicilio)</h3>
+        <div class="dur" data-i18n="tarifa3.dur">120 minutos</div>
         <div class="precio">200€</div>
-        <p>En tu espacio, siempre que dispongas de sitio para instalar un futón en el suelo.</p>
+        <p data-i18n="tarifa3.p">En tu espacio, siempre que dispongas de sitio para instalar un futón en el suelo.</p>
       </div>
     </div>
-    <p class="tarifas-nota">Sesiones en mi espacio de Cala d'Or o a domicilio (bajo condiciones).</p>
+    <p class="tarifas-nota" data-i18n="tarifas.nota">Sesiones en mi espacio de Cala d'Or o a domicilio (bajo condiciones).</p>
   </div>
 </section>
 <!-- ============= FIN SECCIÓN TARIFAS ============= -->
@@ -218,9 +253,9 @@
 <!-- CONTACTO -->
 <section id="contacto">
   <div class="wrap contacto">
-    <div class="eyebrow">Contacto</div>
-    <h2>Reserva tu sesión</h2>
-    <p class="lead">Escríbeme para concertar una llamada de 30 minutos y resolver cualquier
+    <div class="eyebrow" data-i18n="contacto.eyebrow">Contacto</div>
+    <h2 data-i18n="contacto.h2">Reserva tu sesión</h2>
+    <p class="lead" data-i18n="contacto.lead">Escríbeme para concertar una llamada de 30 minutos y resolver cualquier
       duda antes de tu primera sesión.</p>
     <div class="btns">
       <a class="btn2" href="mailto:shavitantra@gmail.com">Email</a>
@@ -231,10 +266,225 @@
 
 <footer>
   <div class="wrap">
-    © <span id="year"></span>Shavi · Masaje Tántrico · <a href="https://maps.app.goo.gl/AX9aRwVKLJjkeiaN7" target="_blank" rel="noopener">Cala d'Or, Mallorca</a>
+    © <span id="year"></span> Shavi · <span data-i18n="footer.service">Masaje Tántrico</span> · <a href="https://maps.app.goo.gl/AX9aRwVKLJjkeiaN7" target="_blank" rel="noopener">Cala d'Or, Mallorca</a>
   </div>
 </footer>
 
-<script>document.getElementById('year').textContent=new Date().getFullYear() + "";</script>
+<script>
+(function () {
+  let t = {
+    es: {
+      metaTitle: "Shavi · Masaje Tántrico en Cala d'Or, Mallorca",
+      metaDescription: "Masaje tántrico con Shavi en Cala d'Or, Mallorca. Sesiones en espacio propio o a domicilio. Yoga del tacto, respiración consciente y presencia.",
+      "nav.sobre": "Sobre mí",
+      "nav.masaje": "El masaje",
+      "nav.lugar": "El lugar",
+      "nav.tarifas": "Tarifas",
+      "nav.contacto": "Contacto",
+      "hero.tag": "Masaje Tántrico · Cala d'Or, Mallorca",
+      "hero.quote": "\"Todos los caminos auténticos llevan a la misma realidad última.\"",
+      "hero.cta": "Reservar una sesión",
+      "sobre.eyebrow": "Sobre mí",
+      "sobre.h2": "Presencia, tacto y consciencia",
+      "sobre.p1": "Soy Shavi. Acompaño a personas a reconectar con su cuerpo a través del masaje tántrico, una práctica que integra todos los aspectos del ser humano: físico, energético, emocional, mental y también sexual.",
+      "sobre.p2": "Me formé en la <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Escuela Verma Kalavati</a>, y trabajo desde el respeto absoluto, la escucha y la presencia. Mi espacio está en Cala d'Or, Mallorca: un lugar tranquilo, pensado para que puedas soltar y habitar el momento.",
+      "sobre.alt": "Shavi en meditación junto al mar en Cala d'Or",
+      "masaje.eyebrow": "El masaje",
+      "masaje.h2": "El Yoga del Tacto",
+      "masaje.lead": "Un toque vacío de intención que lleva presencia a cada zona del cuerpo.",
+      "masaje.p1": "A través del toque consciente, y apoyándonos en la respiración, llevamos presencia a cada zona del cuerpo, relajándola y devolviéndole flexibilidad y vitalidad. Así se deshacen tensiones y nudos energéticos, y se facilita la libre circulación de la energía por todo el cuerpo.",
+      "masaje.p2": "Esto genera una gran relajación física y mental. Con ayuda de la respiración, la energía que se despierta durante la sesión se expande por el cuerpo a través del canal central hasta el corazón, restableciendo el vínculo entre la sexualidad y el afecto, y facilitando estados expandidos de consciencia y profunda meditación.",
+      "lugar.eyebrow": "El lugar",
+      "lugar.h2": "Cala d'Or · Mallorca",
+      "lugar.p": "Entre calas de agua turquesa y pinares, al sureste de Mallorca. Un entorno sereno que forma parte de la experiencia: la calma del mar acompaña el trabajo del cuerpo.",
+      "tarifas.eyebrow": "Tarifas",
+      "tarifas.h2": "Sesiones",
+      "tarifas.lead": "Precios orientativos.",
+      "tarifa1.h3": "Masaje de Respiración Profunda",
+      "tarifa1.dur": "90 minutos",
+      "tarifa1.p": "Primera toma de contacto. Conversación previa, escucha y masaje completo.",
+      "tarifa2.h3": "Masaje Tántrico",
+      "tarifa2.dur": "120 minutos",
+      "tarifa2.p": "La experiencia completa, para profundizar en el trabajo corporal y energético.",
+      "tarifa3.h3": "Masaje Tántrico <br>(a domicilio)",
+      "tarifa3.dur": "120 minutos",
+      "tarifa3.p": "En tu espacio, siempre que dispongas de sitio para instalar un futón en el suelo.",
+      "tarifas.nota": "Sesiones en mi espacio de Cala d'Or o a domicilio (bajo condiciones).",
+      "contacto.eyebrow": "Contacto",
+      "contacto.h2": "Reserva tu sesión",
+      "contacto.lead": "Escríbeme para concertar una llamada de 30 minutos y resolver cualquier duda antes de tu primera sesión.",
+      "footer.service": "Masaje Tántrico"
+    },
+    en: {
+      metaTitle: "Shavi · Tantric Massage in Cala d'Or, Mallorca",
+      metaDescription: "Tantric massage with Shavi in Cala d'Or, Mallorca. Sessions in my own space or at home. Yoga of touch, conscious breathing, and presence.",
+      "nav.sobre": "About me",
+      "nav.masaje": "The massage",
+      "nav.lugar": "The place",
+      "nav.tarifas": "Rates",
+      "nav.contacto": "Contact",
+      "hero.tag": "Tantric Massage · Cala d'Or, Mallorca",
+      "hero.quote": "\"All authentic paths lead to the same ultimate reality.\"",
+      "hero.cta": "Book a session",
+      "sobre.eyebrow": "About me",
+      "sobre.h2": "Presence, touch and awareness",
+      "sobre.p1": "I am Shavi. I accompany people in reconnecting with their body through tantric massage, a practice that integrates every aspect of the human being: physical, energetic, emotional, mental, and also sexual.",
+      "sobre.p2": "I trained at the <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Verma Kalavati School</a>, and I work from absolute respect, listening, and presence. My space is in Cala d'Or, Mallorca: a quiet place designed so you can let go and inhabit the moment.",
+      "sobre.alt": "Shavi meditating by the sea in Cala d'Or",
+      "masaje.eyebrow": "The massage",
+      "masaje.h2": "The Yoga of Touch",
+      "masaje.lead": "A touch empty of intention that brings presence to every part of the body.",
+      "masaje.p1": "Through conscious touch, and supported by the breath, we bring presence to every area of the body, relaxing it and restoring flexibility and vitality. In this way, tensions and energetic knots dissolve, and free circulation of energy throughout the body is facilitated.",
+      "masaje.p2": "This creates deep physical and mental relaxation. With the help of the breath, the energy that awakens during the session expands through the body along the central channel to the heart, restoring the bond between sexuality and affection, and facilitating expanded states of consciousness and deep meditation.",
+      "lugar.eyebrow": "The place",
+      "lugar.h2": "Cala d'Or · Mallorca",
+      "lugar.p": "Among turquoise coves and pine forests, in the southeast of Mallorca. A serene setting that is part of the experience: the calm of the sea accompanies the work of the body.",
+      "tarifas.eyebrow": "Rates",
+      "tarifas.h2": "Sessions",
+      "tarifas.lead": "Indicative prices.",
+      "tarifa1.h3": "Deep Breathing Massage",
+      "tarifa1.dur": "90 minutes",
+      "tarifa1.p": "A first introduction. Prior conversation, listening, and a full massage.",
+      "tarifa2.h3": "Tantric Massage",
+      "tarifa2.dur": "120 minutes",
+      "tarifa2.p": "The complete experience, to go deeper into body and energy work.",
+      "tarifa3.h3": "Tantric Massage <br>(home visit)",
+      "tarifa3.dur": "120 minutes",
+      "tarifa3.p": "In your space, provided there is room to lay a futon on the floor.",
+      "tarifas.nota": "Sessions in my space in Cala d'Or or at home (subject to conditions).",
+      "contacto.eyebrow": "Contact",
+      "contacto.h2": "Book your session",
+      "contacto.lead": "Write to me to arrange a 30-minute call and answer any questions before your first session.",
+      "footer.service": "Tantric Massage"
+    },
+    de: {
+      metaTitle: "Shavi · Tantrische Massage in Cala d'Or, Mallorca",
+      metaDescription: "Tantrische Massage mit Shavi in Cala d'Or, Mallorca. Sitzungen im eigenen Raum oder zu Hause. Yoga der Berührung, bewusste Atmung und Präsenz.",
+      "nav.sobre": "Über mich",
+      "nav.masaje": "Die Massage",
+      "nav.lugar": "Der Ort",
+      "nav.tarifas": "Preise",
+      "nav.contacto": "Kontakt",
+      "hero.tag": "Tantrische Massage · Cala d'Or, Mallorca",
+      "hero.quote": "\"Alle authentischen Wege führen zur gleichen letzten Wirklichkeit.\"",
+      "hero.cta": "Sitzung buchen",
+      "sobre.eyebrow": "Über mich",
+      "sobre.h2": "Präsenz, Berührung und Bewusstsein",
+      "sobre.p1": "Ich bin Shavi. Ich begleite Menschen dabei, durch tantrische Massage wieder mit ihrem Körper in Verbindung zu kommen — eine Praxis, die alle Aspekte des Menschen integriert: körperlich, energetisch, emotional, mental und auch sexuell.",
+      "sobre.p2": "Ich habe mich an der <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Schule Verma Kalavati</a> ausgebildet und arbeite aus absolutem Respekt, Zuhören und Präsenz. Mein Raum liegt in Cala d'Or, Mallorca: ein ruhiger Ort, der dazu einlädt, loszulassen und den Moment zu bewohnen.",
+      "sobre.alt": "Shavi bei der Meditation am Meer in Cala d'Or",
+      "masaje.eyebrow": "Die Massage",
+      "masaje.h2": "Das Yoga der Berührung",
+      "masaje.lead": "Eine Berührung ohne Absicht, die Präsenz in jede Zone des Körpers bringt.",
+      "masaje.p1": "Durch bewusste Berührung und mit Unterstützung der Atmung bringen wir Präsenz in jede Zone des Körpers, entspannen sie und geben ihr Flexibilität und Vitalität zurück. So lösen sich Spannungen und energetische Knoten, und die freie Zirkulation der Energie im ganzen Körper wird erleichtert.",
+      "masaje.p2": "Das erzeugt eine tiefe körperliche und mentale Entspannung. Mit Hilfe der Atmung dehnt sich die Energie, die während der Sitzung erwacht, durch den Körper entlang des zentralen Kanals bis zum Herzen aus, stellt die Verbindung zwischen Sexualität und Zuneigung wieder her und erleichtert erweiterte Bewusstseinszustände und tiefe Meditation.",
+      "lugar.eyebrow": "Der Ort",
+      "lugar.h2": "Cala d'Or · Mallorca",
+      "lugar.p": "Zwischen türkisfarbenen Buchten und Pinienwäldern, im Südosten Mallorcas. Eine ruhige Umgebung, die Teil der Erfahrung ist: die Stille des Meeres begleitet die Arbeit mit dem Körper.",
+      "tarifas.eyebrow": "Preise",
+      "tarifas.h2": "Sitzungen",
+      "tarifas.lead": "Richtpreise.",
+      "tarifa1.h3": "Massage der tiefen Atmung",
+      "tarifa1.dur": "90 Minuten",
+      "tarifa1.p": "Erster Kontakt. Vorgespräch, Zuhören und vollständige Massage.",
+      "tarifa2.h3": "Tantrische Massage",
+      "tarifa2.dur": "120 Minuten",
+      "tarifa2.p": "Die vollständige Erfahrung, um die körperliche und energetische Arbeit zu vertiefen.",
+      "tarifa3.h3": "Tantrische Massage <br>(Hausbesuch)",
+      "tarifa3.dur": "120 Minuten",
+      "tarifa3.p": "In deinem Raum, sofern Platz ist, um einen Futon auf dem Boden auszulegen.",
+      "tarifas.nota": "Sitzungen in meinem Raum in Cala d'Or oder zu Hause (unter Bedingungen).",
+      "contacto.eyebrow": "Kontakt",
+      "contacto.h2": "Buche deine Sitzung",
+      "contacto.lead": "Schreib mir, um ein 30-minütiges Gespräch zu vereinbaren und alle Fragen vor deiner ersten Sitzung zu klären.",
+      "footer.service": "Tantrische Massage"
+    }
+  };
+
+  function langFromUrl() {
+    try {
+      let q = new URLSearchParams(window.location.search).get("lang");
+      if (q) {
+        q = q.toLowerCase().slice(0, 2);
+        if (t[q]) return q;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+    return null;
+  }
+
+  function getLang() {
+    let fromUrl = langFromUrl();
+    if (fromUrl) return fromUrl;
+    try {
+      let stored = localStorage.getItem("lang");
+      if (stored && t[stored]) return stored;
+    } catch (e) {
+      console.error(e);
+    }
+    const nav = (navigator.language || navigator.userLanguage || "es").slice(0, 2).toLowerCase();
+    if (nav === "de" || nav === "en") return nav;
+    return "es";
+  }
+
+  function updateUrl(lang) {
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", lang);
+      // Keep hash (e.g. #contacto) if present
+      history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  function setLang(lang, opts) {
+    if (!t[lang]) lang = "es";
+    opts = opts || {
+      updateUrl: undefined
+    };
+    let dict = t[lang];
+    // Keep <html lang> in sync with the visible language (screen readers, SEO tools, spellcheck).
+    document.documentElement.setAttribute("lang", lang);
+    document.title = dict.metaTitle;
+    let meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", dict.metaDescription);
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      let key = el.dataset.i18n;
+      if (dict[key] != null) el.textContent = dict[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      const key = el.dataset.i18nHtml;
+      if (dict[key] != null) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      const key = el.dataset.i18nAlt;
+      if (dict[key] != null) el.setAttribute("alt", dict[key]);
+    });
+
+    document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.dataset.lang === lang ? "true" : "false");
+    });
+
+    try {
+      localStorage.setItem("lang", lang);
+    } catch (e) {
+      console.error(e);
+    }
+    if (opts.updateUrl !== false) updateUrl(lang);
+  }
+
+  document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      setLang(btn.dataset.lang);
+    });
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear().toString();
+  setLang(getLang());
+})();
+</script>
 </body>
 </html>
