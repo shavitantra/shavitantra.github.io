@@ -251,20 +251,27 @@
       margin-top: 18px;
     }
 
-    .hero .quote {
+    .quote {
       font-style: italic;
       color: var(--ink-soft);
       font-size: 1.25rem;
       margin-top: 26px
     }
 
-    .hero .quote small {
+    .wrap .quote {
+      display: block;
+      padding-left: 2em;
+      padding-right: 2em;
+      text-align: center;
+    }
+
+    .quote small {
       display: block;
       margin-top: 6px;
       font-style: normal;
       letter-spacing: .12em;
       font-size: .72rem;
-      text-transform: uppercase
+      text-transform: uppercase;
     }
 
     .cta {
@@ -723,6 +730,10 @@
     <div class="wrap">
       <div class="eyebrow" data-i18n="sobre.eyebrow">Sobre mí</div>
       <h2 data-i18n="sobre.h2">Presencia, tacto y consciencia</h2>
+      <p class="quote"><span data-i18n="sobre.quote">"Cada instrumento de sanación tiene su función, su lugar y su momento. Si necesitas despertar tu energía, recibir masajes —ser tocado con amor y presencia—, puede ser muy curativo, justamente lo que necesitas para abrir el corazón. Hay seres que a través de sus manos y presencia ayudan a liberar el corazón. ¡Déjate tocar! Ábrete a tu energía, permite que la vida que hay dentro de tí despierte y te muestre el camino."</span>
+        <small>— Ketan Raventós Klein, "Sanar el Corazón"</small>
+      </p>
+      <br>
       <div class="two">
         <img src="img/retrato.jpg" alt="Shavi en meditación junto al mar en Cala d'Or" data-i18n-alt="sobre.alt">
         <div>
@@ -731,9 +742,8 @@
             energético, emocional, mental y también sexual.</p>
           <p data-i18n-html="sobre.p2">Me formé en la <a href="https://vermakalavati.com/" target="_blank"
               rel="noopener">Escuela Verma Kalavati</a>,
-            y trabajo desde el respeto absoluto, la escucha y la presencia. Mi espacio está en Cala d'Or, Mallorca: un
-            lugar
-            tranquilo, pensado para que puedas soltar y habitar el momento.</p>
+            y trabajo desde el respeto absoluto, la escucha y la presencia. Mi espacio está en Cala d'Or, Mallorca: un lugar tranquilo, pensado para que puedas soltar y habitar el momento.</p>
+          <p data-i18n="sobre.p3">La cercanía y el contacto son parte natural de mi manera de relacionarme. Me resulta fácil conectar de tú a tú y dar espacio a lo íntimo, sin necesidad de forzarlo. En mis sesiones, esa cercanía se une a la escucha y al respeto por tu ritmo y tus límites.</p>
         </div>
       </div>
     </div>
@@ -807,26 +817,26 @@
       <p class="lead" data-i18n="tarifas.lead">Precios orientativos.</p>
       <div class="tarifas">
         <div class="tarifa">
-          <h3 data-i18n="tarifa1.h3">Masaje de Respiración Profunda</h3>
-          <div class="dur" data-i18n="tarifa1.dur">90 minutos</div>
-          <div class="precio">90€</div>
+          <h3 data-i18n="tarifa1.h3">Masaje relajante</h3>
+          <div class="dur" data-i18n="tarifa1.dur">60 minutos</div>
+          <div class="precio">60€</div>
           <p data-i18n="tarifa1.p">Primera toma de contacto. Conversación previa, escucha y masaje completo.</p>
         </div>
         <div class="tarifa">
-          <h3 data-i18n="tarifa2.h3">Masaje Tántrico</h3>
-          <div class="dur" data-i18n="tarifa2.dur">120 minutos</div>
-          <div class="precio">160€</div>
-          <p data-i18n="tarifa2.p">La experiencia completa, para profundizar en el trabajo corporal y energético.</p>
+          <h3 data-i18n="tarifa2.h3">Masaje de Respiración Íntima</h3>
+          <div class="dur" data-i18n="tarifa2.dur">90 minutos</div>
+          <div class="precio">90€</div>
+          <p data-i18n="tarifa2.p">Primera toma de contacto. Conversación previa, escucha y masaje completo.</p>
         </div>
         <div class="tarifa">
-          <h3 data-i18n-html="tarifa3.h3">Masaje Tántrico <br>(a domicilio)</h3>
+          <h3 data-i18n="tarifa3.h3">Masaje Tántrico</h3>
           <div class="dur" data-i18n="tarifa3.dur">120 minutos</div>
-          <div class="precio">200€</div>
-          <p data-i18n="tarifa3.p">En tu espacio, siempre que dispongas de sitio para instalar un futón en el suelo.</p>
+          <div class="precio">160€</div>
+          <p data-i18n="tarifa3.p">La experiencia completa, para profundizar en el trabajo corporal y energético.</p>
         </div>
       </div>
-      <p class="tarifas-nota" data-i18n="tarifas.nota">Sesiones en mi espacio de Cala d'Or o a domicilio (bajo
-        condiciones).</p>
+      <p class="tarifas-nota" data-i18n="tarifas.nota">Sesiones en mi espacio de Cala d'Or o a domicilio
+                                                       (siempre que dispongas de sitio para instalar un futón en el suelo).</p>
     </div>
   </section>
   <!-- ============= FIN SECCIÓN TARIFAS ============= -->
@@ -841,8 +851,8 @@
       <div class="btns">
         <a class="btn2" href="mailto:shavitantra@gmail.com">Email</a>
         <a class="btn2" href="https://www.instagram.com/shavitantra/" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn2" href="https://api.whatsapp.com/send?phone=34693484151" target="_blank"
-          rel="noopener">Whatsapp</a>
+        <a class="btn2" href="https://api.whatsapp.com/send?phone=34687732572" target="_blank"
+          rel="noopener">WhatsApp</a>
       </div>
     </div>
   </section>
@@ -870,8 +880,10 @@
           "hero.cta": "Reservar una sesión",
           "sobre.eyebrow": "Sobre mí",
           "sobre.h2": "Presencia, tacto y consciencia",
+          "sobre.quote": "“Cada instrumento de sanación tiene su función, su lugar y su momento. Si necesitas despertar tu energía, recibir masajes —ser tocado con amor y presencia—, puede ser muy curativo, justamente lo que necesitas para abrir el corazón. Hay seres que a través de sus manos y presencia ayudan a liberar el corazón. ¡Déjate tocar! Ábrete a tu energía, permite que la vida que hay dentro de tí despierte y te muestre el camino.“",
           "sobre.p1": "Soy Shavi. Acompaño a personas a reconectar con su cuerpo a través del masaje tántrico, una práctica que integra todos los aspectos del ser humano: físico, energético, emocional, mental y también sexual.",
           "sobre.p2": "Me formé en la <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Escuela Verma Kalavati</a>, y trabajo desde el respeto absoluto, la escucha y la presencia. Mi espacio está en Cala d'Or, un lugar tranquilo, pensado para que puedas soltar y habitar el momento.",
+          "sobre.p3": "La cercanía y el contacto son parte natural de mi manera de relacionarme. Me resulta fácil conectar de tú a tú y dar espacio a lo íntimo, sin necesidad de forzarlo. En mis sesiones, esa cercanía se une a la escucha y al respeto por tu ritmo y tus límites.",
           "sobre.alt": "Shavi en meditación junto al mar en Cala d'Or",
           "masaje.eyebrow": "El masaje",
           "masaje.h2": "El Yoga del Tacto",
@@ -890,16 +902,16 @@
           "tarifas.eyebrow": "Tarifas",
           "tarifas.h2": "Sesiones",
           "tarifas.lead": "Todos los masajes se realizan sobre un futón en el suelo, con aceite tibio, en un espacio privado y cómodo.",
-          "tarifa1.h3": "Masaje de Respiración Profunda",
-          "tarifa1.dur": "90 minutos",
-          "tarifa1.p": "Primera toma de contacto. Conversación previa, escucha y masaje completo.",
-          "tarifa2.h3": "Masaje Tántrico",
-          "tarifa2.dur": "120 minutos",
-          "tarifa2.p": "La experiencia completa, para profundizar en el trabajo corporal y energético.",
-          "tarifa3.h3": "Masaje Tántrico <br>(a domicilio)",
-          "tarifa3.dur": "120 minutos",
-          "tarifa3.p": "En tu espacio, siempre que dispongas de sitio para instalar un futón en el suelo.",
-          "tarifas.nota": "Sesiones en mi espacio de Cala d'Or o a domicilio (bajo condiciones).",
+          "tarifa1.h3": "Masaje relajante con aceite caliente",
+          "tarifa1.dur": "60 minutos",
+          "tarifa1.p": "Un masaje de cuerpo completo con aceite caliente para soltar la tensión muscular y el estrés. Ideal si es tu primera vez.",
+          "tarifa2.h3": "Masaje de respiración consciente",
+          "tarifa2.dur": "90 minutos",
+          "tarifa2.p": "Empezamos con una conversación para conocer qué necesitas. Después, el masaje relajante con trabajo de diafragma para soltar tensión y facilitar una relajación más profunda.",
+          "tarifa3.h3": "Ritual de masaje tántrico",
+          "tarifa3.dur": "150 minutos",
+          "tarifa3.p": "La experiencia completa: una conversación previa, un breve ritual de apertura para traer presencia al cuerpo y un masaje de respiración consciente, terminando con un masaje visceral (trabajo suave sobre el abdomen) y un masaje tradicional de zonas íntimas, siempre con tu consentimiento y límites acordados.",
+          "tarifas.nota": "Sesiones en mi espacio de Cala d'Or o a domicilio, siempre que dispongas de sitio para instalar un futón en el suelo.",
           "contacto.eyebrow": "Contacto",
           "contacto.h2": "Reserva tu sesión",
           "contacto.lead": "Escríbeme para concertar una llamada de 30 minutos y resolver cualquier duda antes de tu primera sesión.",
@@ -918,8 +930,10 @@
           "hero.cta": "Book a session",
           "sobre.eyebrow": "About me",
           "sobre.h2": "Presence, touch and awareness",
+          "sobre.quote": "“Every instrument of healing has its own purpose, its place, and its time. When you need to awaken your energy, massage can be a balm: to be touched with love and presence is often just what the heart needs to open. Some beings, through their hands and their presence, help set the heart free. Let yourself be touched! Open to your own energy, let the life within you stir awake and light your way.”",
           "sobre.p1": "I am Shavi. I accompany people in reconnecting with their body through tantric massage, a practice that integrates every aspect of the human being: physical, energetic, emotional, mental, and also sexual.",
           "sobre.p2": "I trained at the <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Verma Kalavati School</a>, and I work from absolute respect, listening, and presence. My space is in Cala d'Or, a quiet place designed so you can let go and inhabit the moment.",
+          "sobre.p3": "Closeness and touch are a natural part of how I relate to others. I find it easy to connect on equal terms and make space for intimacy, without forcing it. In my sessions, that closeness goes hand in hand with attentive listening and respect for your pace and boundaries.",
           "sobre.alt": "Shavi meditating by the sea in Cala d'Or",
           "masaje.eyebrow": "The massage",
           "masaje.h2": "The Yoga of Touch",
@@ -938,16 +952,16 @@
           "tarifas.eyebrow": "Rates",
           "tarifas.h2": "Sessions",
           "tarifas.lead": "All massages are done on a futon on the floor, with warm oil, in a private and comfortable space.",
-          "tarifa1.h3": "Deep Breathing Massage",
-          "tarifa1.dur": "90 minutes",
-          "tarifa1.p": "A first introduction. Prior conversation, listening, and a deep massage to relax your diaphragm, the muscle essential for breathing.",
-          "tarifa2.h3": "Tantric Massage",
-          "tarifa2.dur": "120 minutes",
-          "tarifa2.p": "The complete experience, to go deeper into body and energy work.",
-          "tarifa3.h3": "Tantric Massage <br>(at your place)",
-          "tarifa3.dur": "120 minutes",
-          "tarifa3.p": "In your space, provided there is room to lay a futon on the floor.",
-          "tarifas.nota": "Sessions in my space in Cala d'Or or at home (subject to conditions).",
+          "tarifa1.h3": "Warm Oil Relaxing Massage",
+          "tarifa1.dur": "60 minutes",
+          "tarifa1.p": "A full-body massage with warm oil to release muscle tension and stress. Ideal if it’s your first time.",
+          "tarifa2.h3": "Conscious Breathing Massage",
+          "tarifa2.dur": "90 minutes",
+          "tarifa2.p": "We begin with a conversation to understand what you need. Then, a relaxing massage with diaphragm work to release tension and allow a deeper relaxation.",
+          "tarifa3.h3": "Tantric Massage Ritual",
+          "tarifa3.dur": "150 minutes",
+          "tarifa3.p": "The complete experience: a preliminary conversation, a short opening ritual to bring presence into the body, and a conscious breathing massage, ending with a visceral massage (gentle work on the abdomen) and a traditional massage of the intimate areas, always with your consent and agreed boundaries.",
+          "tarifas.nota": "Sessions in my space in Cala d'Or or at home, provided there is room to lay a futon on the floor.",
           "contacto.eyebrow": "Contact",
           "contacto.h2": "Book your session",
           "contacto.lead": "Write to me to arrange a 30-minute call and answer any questions before your first session.",
@@ -966,8 +980,10 @@
           "hero.cta": "Réserver une séance",
           "sobre.eyebrow": "À propos",
           "sobre.h2": "Présence, toucher et conscience",
+          "sobre.quote": "“Chaque instrument de guérison a sa fonction, sa place et son moment. Lorsque tu as besoin d’éveiller ton énergie, le massage peut être un baume : être touché avec amour et présence est souvent exactement ce dont le cœur a besoin pour s’ouvrir. Certains êtres, par leurs mains et leur présence, aident à libérer le cœur. Laisse-toi toucher ! Ouvre-toi à ton énergie, laisse la vie qui est en toi s’éveiller et éclairer ton chemin.”",
           "sobre.p1": "Je suis Shavi. J’accompagne les personnes à se reconnecter avec leur corps à travers le massage tantrique, une pratique qui intègre tous les aspects de l’être humain : physique, énergétique, émotionnel, mental et aussi sexuel.",
           "sobre.p2": "Je me suis formé à l’<a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">École Verma Kalavati</a>, et je travaille dans le respect absolu, l’écoute et la présence. Mon espace se trouve à Cala d’Or, un lieu tranquille, conçu pour que vous puissiez lâcher prise et habiter l’instant.",
+          "sobre.p3": "La proximité et le contact font naturellement partie de ma façon d’entrer en relation. Il m’est facile de créer un lien d’égal à égal et de laisser place à l’intimité, sans la forcer. Lors de mes séances, cette proximité s’allie à l’écoute et au respect de votre rythme et de vos limites.",
           "sobre.alt": "Shavi en méditation près de la mer à Cala d’Or",
           "masaje.eyebrow": "Le massage",
           "masaje.h2": "Le Yoga du Toucher",
@@ -986,68 +1002,20 @@
           "tarifas.eyebrow": "Tarifs",
           "tarifas.h2": "Séances",
           "tarifas.lead": "Tous les massages se déroulent sur un futon au sol, avec de l’huile tiède, dans un espace privé et confortable.",
-          "tarifa1.h3": "Massage de Respiration Profonde",
-          "tarifa1.dur": "90 minutes",
-          "tarifa1.p": "Première prise de contact. Conversation préalable, écoute et massage complet.",
-          "tarifa2.h3": "Massage Tantrique",
-          "tarifa2.dur": "120 minutes",
-          "tarifa2.p": "L’expérience complète, pour approfondir le travail corporel et énergétique.",
-          "tarifa3.h3": "Massage Tantrique <br>(à domicile)",
-          "tarifa3.dur": "120 minutes",
-          "tarifa3.p": "Dans votre espace, à condition de disposer d’un endroit pour installer un futon au sol.",
-          "tarifas.nota": "Séances dans mon espace de Cala d’Or ou à domicile (sous conditions).",
+          "tarifa1.h3": "Massage relaxant à l’huile chaude",
+          "tarifa1.dur": "60 minutes",
+          "tarifa1.p": "Un massage du corps entier à l’huile chaude pour relâcher les tensions musculaires et le stress. Idéal si c’est votre première fois.",
+          "tarifa2.h3": "Massage de respiration consciente",
+          "tarifa2.dur": "90 minutes",
+          "tarifa2.p": "Nous commençons par une conversation pour comprendre vos besoins. Ensuite, un massage relaxant avec un travail du diaphragme pour relâcher les tensions et favoriser une détente plus profonde.",
+          "tarifa3.h3": "Rituel de massage tantrique",
+          "tarifa3.dur": "150 minutes",
+          "tarifa3.p": "L’expérience complète: une conversation préalable, un court rituel d’ouverture pour ramener la présence dans le corps et un massage à respiration consciente, pour terminer par un massage viscéral (travail doux sur l’abdomen) et un massage traditionnel des zones intimes, toujours avec votre consentement et des limites convenues.",
+          "tarifas.nota": "Séances dans mon espace de Cala d’Or ou à domicile, sous  condition de disposer d’un endroit pour installer un futon au sol.",
           "contacto.eyebrow": "Contact",
           "contacto.h2": "Réservez votre séance",
           "contacto.lead": "Écrivez-moi pour convenir d’un appel de 30 minutes et répondre à toutes vos questions avant votre première séance.",
           "footer.service": "Massage Tantrique"
-        },
-        de: {
-          metaTitle: "Shavi · Tantrische Massage in Cala d'Or, Mallorca",
-          metaDescription: "Tantrische Massage mit Shavi in Cala d'Or, Mallorca. Sitzungen im eigenen Raum oder zu Hause. Yoga der Berührung, bewusste Atmung und Präsenz.",
-          "nav.sobre": "Über mich",
-          "nav.masaje": "Die Massage",
-          "nav.lugar": "Der Ort",
-          "nav.tarifas": "Preise",
-          "nav.contacto": "Kontakt",
-          "hero.tag": "Tantrische Massage · Cala d'Or, Mallorca",
-          "hero.quote": "\"Alle authentischen Wege führen zur gleichen letzten Wirklichkeit.\"",
-          "hero.cta": "Sitzung buchen",
-          "sobre.eyebrow": "Über mich",
-          "sobre.h2": "Präsenz, Berührung und Bewusstsein",
-          "sobre.p1": "Ich bin Shavi. Ich begleite Menschen dabei, durch tantrische Massage wieder mit ihrem Körper in Verbindung zu kommen — eine Praxis, die alle Aspekte des Menschen integriert: körperlich, energetisch, emotional, mental und auch sexuell.",
-          "sobre.p2": "Ich habe mich an der <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Schule Verma Kalavati</a> ausgebildet und arbeite aus absolutem Respekt, Zuhören und Präsenz. Mein Raum liegt in Cala d'Or, ein ruhiger Ort, der dazu einlädt, loszulassen und den Moment zu bewohnen.",
-          "sobre.alt": "Shavi bei der Meditation am Meer in Cala d'Or",
-          "masaje.eyebrow": "Die Massage",
-          "masaje.h2": "Das Yoga der Berührung",
-          "masaje.lead": "Eine Berührung ohne Absicht, die Präsenz in jede Zone des Körpers bringt.",
-          "masaje.p1": "Durch bewusste Berührung und mit Unterstützung der Atmung bringen wir Präsenz in jede Zone des Körpers, entspannen sie und geben ihr Flexibilität und Vitalität zurück. So lösen sich Spannungen und energetische Knoten, und die freie Zirkulation der Energie im ganzen Körper wird erleichtert.",
-          "masaje.p2": "Das erzeugt eine tiefe körperliche und mentale Entspannung. Mit Hilfe der Atmung dehnt sich die Energie, die während der Sitzung erwacht, durch den Körper entlang des zentralen Kanals bis zum Herzen aus, stellt die Verbindung zwischen Sexualität und Zuneigung wieder her und erleichtert erweiterte Bewusstseinszustände und tiefe Meditation.",
-          "lugar.eyebrow": "Der Ort",
-          "lugar.h2": "Cala d'Or · Mallorca",
-          "lugar.p": "Zwischen türkisfarbenen Buchten und Pinienwäldern, im Südosten Mallorcas. Eine ruhige Umgebung, die Teil der Erfahrung ist: die Stille des Meeres begleitet die Arbeit mit dem Körper.",
-          "lugar.alt": "Cala d'Or, Mallorca",
-          "carousel.label": "Fotos von Cala d'Or",
-          "carousel.prev": "Vorheriges Foto",
-          "carousel.next": "Nächstes Foto",
-          "carousel.dots": "Fotos",
-          "carousel.goto": "Zum Foto",
-          "tarifas.eyebrow": "Preise",
-          "tarifas.h2": "Sitzungen",
-          "tarifas.lead": "Alle Maschen werden auf einem Futon auf dem Boden durchgeführt, mit warmem Öl, in einem privaten und komfortablen Raum.",
-          "tarifa1.h3": "Massage der tiefen Atmung",
-          "tarifa1.dur": "90 Minuten",
-          "tarifa1.p": "Erster Kontakt. Vorgespräch, Zuhören und vollständige Massage.",
-          "tarifa2.h3": "Tantrische Massage",
-          "tarifa2.dur": "120 Minuten",
-          "tarifa2.p": "Die vollständige Erfahrung, um die körperliche und energetische Arbeit zu vertiefen.",
-          "tarifa3.h3": "Tantrische Massage <br>(Hausbesuch)",
-          "tarifa3.dur": "120 Minuten",
-          "tarifa3.p": "In deinem Raum, sofern Platz ist, um einen Futon auf dem Boden auszulegen.",
-          "tarifas.nota": "Sitzungen in meinem Raum in Cala d'Or oder zu Hause (unter Bedingungen).",
-          "contacto.eyebrow": "Kontakt",
-          "contacto.h2": "Buche deine Sitzung",
-          "contacto.lead": "Schreib mir, um ein 30-minütiges Gespräch zu vereinbaren und alle Fragen vor deiner ersten Sitzung zu klären.",
-          "footer.service": "Tantrische Massage"
         },
         pt: {
           metaTitle: "Shavi · Massagem Tântrica em Cala d'Or, Maiorca",
@@ -1062,8 +1030,10 @@
           "hero.cta": "Reservar uma sessão",
           "sobre.eyebrow": "Sobre mim",
           "sobre.h2": "Presença, toque e consciência",
+          "sobre.quote": "“Cada instrumento de cura tem a sua função, o seu lugar e o seu momento. Quando precisas de despertar a tua energia, a massagem pode ser um bálsamo: ser tocado com amor e presença é muitas vezes exatamente o que o coração precisa para se abrir. Há seres que, através das suas mãos e da sua presença, ajudam a libertar o coração. Deixa-te tocar! Abre-te à tua energia, deixa que a vida que há em ti desperte e ilumine o teu caminho.”",
           "sobre.p1": "Sou o Shavi. Acompanho pessoas a reconectar-se com o seu corpo através da massagem tântrica, uma prática que integra todos os aspetos do ser humano: físico, energético, emocional, mental e também sexual.",
           "sobre.p2": "Formei-me na <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Escola Verma Kalavati</a>, e trabalho a partir do respeito absoluto, da escuta e da presença. O meu espaço fica em Cala d’Or, Maiorca: um lugar tranquilo, pensado para que possas soltar e habitar o momento.",
+          "sobre.p3": "A proximidade e o contacto fazem parte da minha forma natural de me relacionar. É-me fácil criar uma ligação de igual para igual e dar espaço à intimidade, sem a forçar. Nas minhas sessões, essa proximidade alia-se à escuta e ao respeito pelo teu ritmo e pelos teus limites.",
           "sobre.alt": "Shavi em meditação junto ao mar em Cala d’Or",
           "masaje.eyebrow": "A massagem",
           "masaje.h2": "O Yoga do Toque",
@@ -1082,16 +1052,16 @@
           "tarifas.eyebrow": "Tarifas",
           "tarifas.h2": "Sessões",
           "tarifas.lead": "Todas as massagens são realizadas sobre um futon no chão, com óleo morno, num espaço privado e confortável.",
-          "tarifa1.h3": "Massagem de Respiração Profunda",
-          "tarifa1.dur": "90 minutos",
-          "tarifa1.p": "Primeira tomada de contacto. Conversa prévia, escuta e massagem completa.",
-          "tarifa2.h3": "Massagem Tântrica",
-          "tarifa2.dur": "120 minutos",
-          "tarifa2.p": "A experiência completa, para aprofundar o trabalho corporal e energético.",
-          "tarifa3.h3": "Massagem Tântrica <br>(ao domicílio)",
-          "tarifa3.dur": "120 minutos",
-          "tarifa3.p": "No teu espaço, desde que disponhas de sítio para instalar um futon no chão.",
-          "tarifas.nota": "Sessões no meu espaço de Cala d’Or ou ao domicílio (sob condições).",
+          "tarifa1.h3": "Massagem relaxante com óleo quente",
+          "tarifa1.dur": "60 minutos",
+          "tarifa1.p": "Uma massagem de corpo inteiro com óleo quente para libertar a tensão muscular e o stress. Ideal se for a sua primeira vez.",
+          "tarifa2.h3": "Massagem de respiração consciente",
+          "tarifa2.dur": "90 minutos",
+          "tarifa2.p": "Começamos com uma conversa para perceber do que precisa. Depois, uma massagem relaxante com trabalho do diafragma para libertar a tensão e facilitar um relaxamento mais profundo.",
+          "tarifa3.h3": "Ritual de massagem tântrica",
+          "tarifa3.dur": "150 minutos",
+          "tarifa3.p": "A experiência completa: uma conversa prévia, um breve ritual de abertura para trazer presença ao corpo e uma massagem com respiração consciente, terminando com uma massagem visceral (trabalho suave sobre o abdómen) e uma massagem tradicional das zonas íntimas, sempre com o seu consentimento e limites acordados.",
+          "tarifas.nota": "Sessões no meu espaço de Cala d’Or ou ao domicílio, desde que disponhas de sítio para instalar um futon no chão.",
           "contacto.eyebrow": "Contacto",
           "contacto.h2": "Reserva a tua sessão",
           "contacto.lead": "Escreve-me para marcarmos uma chamada de 30 minutos e esclarecer qualquer dúvida antes da tua primeira sessão.",
