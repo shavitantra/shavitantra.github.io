@@ -646,6 +646,23 @@
       text-align: center
     }
 
+    .sri-yantra {
+      position: relative;
+      overflow: hidden;           /* evita que el yantra desborde */
+      isolation: isolate;         /* mantiene el blend dentro de la sección */
+    }
+
+    .sri-yantra::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: url("/img/sri-yantra.jpg") center / min(100%, 500px) no-repeat;
+      mix-blend-mode: multiply;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
     .btns {
       display: flex;
       gap: 16px;
@@ -832,7 +849,7 @@
   <!-- ============= FIN SECCIÓN TARIFAS ============= -->
 
   <!-- CONTACTO -->
-  <section id="contacto">
+  <section id="contacto" class="sri-yantra">
     <div class="wrap contacto">
       <div class="eyebrow" data-i18n="contacto.eyebrow"></div>
       <h2 data-i18n="contacto.h2">Reserva tu sesión</h2>
