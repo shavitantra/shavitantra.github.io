@@ -376,7 +376,7 @@
 
     .carousel {
       position: relative;
-      min-height: 100vh;
+      min-height: 60vh;
       overflow: hidden;
       background: var(--sand)
     }
@@ -585,7 +585,11 @@
       border-radius: 14px;
       padding: 36px 28px;
       text-align: center;
-      transition: transform .2s, box-shadow .2s
+      transition: transform .2s, box-shadow .2s;
+      display: grid;
+      grid-row: span 4;
+      grid-template-rows: subgrid;
+      row-gap: 0
     }
 
     section:nth-of-type(even) .tarifa {
@@ -791,7 +795,7 @@
           <img src="img/calador3.avif" alt="Cala d'Or, Mallorca" data-i18n-alt="lugar.alt" width="1600" height="1000" decoding="async" loading="lazy">
         </div>
         <div class="carousel-slide">
-          <img src="img/interior.webp" alt="Cala d'Or, Mallorca" data-i18n-alt="lugar.alt" width="1600" height="1000" decoding="async" loading="lazy">
+          <img src="img/interior.webp" alt="Cala d'Or, Mallorca" data-i18n-alt="lugar.alt" width="1280" height="800" decoding="async" loading="lazy">
         </div>
         <div class="carousel-slide">
           <img src="img/calador4.avif" alt="Cala d'Or, Mallorca" data-i18n-alt="lugar.alt" width="1600" height="1000" decoding="async" loading="lazy">
@@ -827,19 +831,19 @@
         <div class="tarifa">
           <h3 data-i18n="tarifa1.h3"></h3>
           <div class="dur" data-i18n="tarifa1.dur"></div>
-          <div class="precio"></div>
+          <div class="precio">60€</div>
           <p data-i18n="tarifa1.p"></p>
         </div>
         <div class="tarifa">
           <h3 data-i18n="tarifa2.h3"></h3>
           <div class="dur" data-i18n="tarifa2.dur"></div>
-          <div class="precio"></div>
+          <div class="precio">90€</div>
           <p data-i18n="tarifa2.p"></p>
         </div>
         <div class="tarifa">
           <h3 data-i18n="tarifa3.h3"></h3>
           <div class="dur" data-i18n="tarifa3.dur"></div>
-          <div class="precio"></div>
+          <div class="precio">160€</div>
           <p data-i18n="tarifa3.p"></p>
         </div>
       </div>
