@@ -16,8 +16,14 @@ Sitio estático publicado con GitHub Pages en `shavitantra.github.io`.
 
 ## Cómo editar (guía para Xavi)
 
-- **Tarifas** → busca `SECCIÓN TARIFAS` en `index.html` y cambia importes/duraciones.
-- **Textos** → busca el texto en la página y edítalo directamente.
+- **Tarifas** → busca `SECCIÓN TARIFAS` en `index.html` y cambia importes/duraciones. Actualiza también `makesOffer`/`priceRange` en el bloque `application/ld+json` del `<head>` (datos para Google).
+- **Textos** → busca el texto en la página y edítalo directamente. El inglés se escribe en el HTML (es lo que lee Google; el público objetivo es extranjero); las traducciones ES/FR/PT están en el diccionario `t` del `<script>` final.
+
+## SEO
+
+- `<head>`: title/description, canonical, `hreflang` (en = URL principal, otros idiomas = `?lang=xx`), Open Graph y JSON-LD `HealthAndBeautyBusiness`.
+- `robots.txt` y `sitemap.xml` en la raíz. Al cambiar contenido importante, actualiza `<lastmod>` del sitemap.
+- Los bots siempre ven la versión en inglés (ver `getLang()`).
 - **Fotos** → sustituye los archivos en `/img` manteniendo el mismo nombre, o cambia las rutas `src="img/..."`.
 - **Colores** → variables CSS en `:root`.
 - **Fuentes**:
@@ -29,7 +35,7 @@ Sitio estático publicado con GitHub Pages en `shavitantra.github.io`.
 
 ## Convenciones
 
-- Idioma del sitio: **español** (`lang="es"`). Escribe textos y comentarios en español.
+- Idioma por defecto del sitio: **inglés** (`lang="en"`), el público objetivo es extranjero; español/francés/portugués via `?lang=xx`. Escribe comentarios de código en español.
 - Mantén el CSS inline dentro de `index.html`; el proyecto es intencionadamente simple, sin build tools.
 - Diseño sobrio y elegante: paleta crema/dorado, tipografías serif.
 
@@ -37,5 +43,5 @@ Sitio estático publicado con GitHub Pages en `shavitantra.github.io`.
 
 - Email: `shavitantra@gmail.com`
 - Instagram: https://www.instagram.com/shavitantra/
-- Bio Sites: https://bio.site/shavitantra_es
+- WhatsApp: +34 678 90 12 34
 - Formación: Verma Kalavati (https://vermakalavati.com/)

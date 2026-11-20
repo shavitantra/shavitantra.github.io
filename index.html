@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -21,10 +21,93 @@
       }
     })();
   </script>
-  <title>Shavi · Tantric Massage · Mallorca</title>
-  <meta name="description"
-    content="Masaje tántrico con Shavi en Cala d'Or, Mallorca. Sesiones en espacio propio o a domicilio. Yoga del tacto, respiración consciente y presencia.">
+  <title>Shavi · Tantric Massage in Cala d'Or, Mallorca</title>
+  <meta name="description" content="Tantric massage with Shavi in Cala d'Or, Mallorca. Sessions in my own space or at home. Yoga of touch, conscious breathing, and presence.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#f6f0e6">
+
+  <!-- SEO: versiones de idioma. Inglés es la versión principal (sin ?lang), ya que el público objetivo es extranjero. -->
+  <link rel="canonical" href="https://shavitantra.com/">
+  <link rel="alternate" hreflang="en" href="https://shavitantra.com/">
+  <link rel="alternate" hreflang="es" href="https://shavitantra.com/?lang=es">
+  <link rel="alternate" hreflang="fr" href="https://shavitantra.com/?lang=fr">
+  <link rel="alternate" hreflang="pt" href="https://shavitantra.com/?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://shavitantra.com/">
+
+  <!-- SEO: vista previa al compartir en WhatsApp, Instagram, Facebook… -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shavi Tantra">
+  <meta property="og:url" content="https://shavitantra.com/">
+  <meta property="og:title" content="Shavi · Tantric Massage in Cala d'Or, Mallorca">
+  <meta property="og:description" content="Tantric massage in Cala d'Or, Mallorca. Yoga of touch, conscious breathing, and presence. Sessions in my own space or at home.">
+  <meta property="og:image" content="https://shavitantra.com/img/retrato.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Shavi meditating by the sea in Cala d'Or">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="pt_PT">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="apple-touch-icon" href="img/logo.png">
+
+  <!-- SEO: datos estructurados del negocio (Google / mapas). Si cambian precios o datos, actualízalos también aquí. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "@id": "https://shavitantra.com/#negocio",
+    "name": "Shavi · Tantric Massage",
+    "alternateName": "Shavi Tantra",
+    "description": "Tantric massage in Cala d'Or, Mallorca. Yoga of touch, conscious breathing, and presence. Sessions in my own space or at home.",
+    "url": "https://shavitantra.com/",
+    "logo": "https://shavitantra.com/img/logo.png",
+    "image": [
+      "https://shavitantra.com/img/retrato.jpg",
+      "https://shavitantra.com/img/masaje.jpg"
+    ],
+    "email": "shavitantra@gmail.com",
+    "telephone": "+34687732572",
+    "priceRange": "60€ – 160€",
+    "currenciesAccepted": "EUR",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer Francisca Merlange",
+      "addressLocality": "Cala d'Or",
+      "addressRegion": "Illes Balears",
+      "postalCode": "07660",
+      "addressCountry": "ES"
+    },
+    "areaServed": { "@type": "Place", "name": "Mallorca" },
+    "hasMap": "https://maps.app.goo.gl/A8GR3d5qvxoUNCtr5",
+    "knowsLanguage": ["en", "es", "fr", "pt"],
+    "sameAs": [
+      "https://www.instagram.com/shavitantra/"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "price": "60",
+        "priceCurrency": "EUR",
+        "itemOffered": { "@type": "Service", "name": "Warm Oil Relaxing Massage (60 min)" }
+      },
+      {
+        "@type": "Offer",
+        "price": "90",
+        "priceCurrency": "EUR",
+        "itemOffered": { "@type": "Service", "name": "Conscious Breathing Massage (90 min)" }
+      },
+      {
+        "@type": "Offer",
+        "price": "160",
+        "priceCurrency": "EUR",
+        "itemOffered": { "@type": "Service", "name": "Tantric Massage Ritual (150 min)" }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -244,6 +327,8 @@
     }
 
     .hero .tag {
+      display: block;
+      line-height: 1.75;
       font-family: var(--font-ui), serif;
       color: var(--ink-soft);
       letter-spacing: .22em;
@@ -647,7 +732,8 @@
 
     /* CONTACTO */
     .contacto {
-      text-align: center
+      text-align: center;
+      min-height: 20em;
     }
 
     .sri-yantra {
@@ -661,7 +747,7 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background: url("/img/sri-yantra.jpg") center / min(100%, 500px) no-repeat;
+      background: url("/img/sri-yantra.jpg") center / min(100%, 600px) no-repeat;
       mix-blend-mode: multiply;
       opacity: 0.06;
       pointer-events: none;
@@ -717,15 +803,15 @@
       <a class="brand" href="#"><img src="img/logo.png" alt="Logo Shavi Tantra"><span>Shavi</span></a>
       <div class="nav-right">
         <div class="nav-links">
-          <a href="#sobre" data-i18n="nav.sobre">Sobre mí</a>
-          <a href="#masaje" data-i18n="nav.masaje">El masaje</a>
-          <a href="#lugar" data-i18n="nav.lugar">El lugar</a>
-          <a href="#tarifas" data-i18n="nav.tarifas">Tarifas</a>
-          <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+          <a href="#sobre" data-i18n="nav.sobre">About me</a>
+          <a href="#masaje" data-i18n="nav.masaje">The massage</a>
+          <a href="#lugar" data-i18n="nav.lugar">The place</a>
+          <a href="#tarifas" data-i18n="nav.tarifas">Rates</a>
+          <a href="#contacto" data-i18n="nav.contacto">Contact</a>
         </div>
         <div class="lang-switch">
-          <button type="button" data-lang="en" aria-pressed="false" title="English">EN</button>
-          <button type="button" data-lang="es" aria-pressed="true" title="Español">ES</button>
+          <button type="button" data-lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false" title="Español">ES</button>
           <button type="button" data-lang="fr" aria-pressed="false" title="Français">FR</button>
           <button type="button" data-lang="pt" aria-pressed="false" title="Portugês">PT</button>
         </div>
@@ -736,31 +822,29 @@
   <header class="hero">
     <div class="hero-inner">
       <img class="hero-logo" src="img/logo.png" alt="Logo Shavi Tantra">
-      <h1>Shavi</h1>
-      <div class="tag" data-i18n="hero.tag">Masaje Tántrico · Cala d'Or, Mallorca</div>
-      <p class="quote"><span data-i18n="hero.quote">"Todos los caminos auténticos llevan a la misma realidad
-          última."</span>
+      <h1>Shavi<span class="tag" data-i18n="hero.tag">Tantric Massage · Cala d'Or, Mallorca</span></h1>
+      <p class="quote"><span data-i18n="hero.quote">"All authentic paths lead to the same ultimate reality."</span>
         <small>— Ramakrishna</small>
       </p>
-      <a class="cta" href="#contacto" data-i18n="hero.cta">Reservar una sesión</a>
+      <a class="cta" href="#contacto" data-i18n="hero.cta">Book a session</a>
     </div>
   </header>
 
   <!-- SOBRE MÍ -->
   <section id="sobre">
     <div class="wrap">
-      <div class="eyebrow" data-i18n="sobre.eyebrow">Sobre mí</div>
-      <h2 data-i18n="sobre.h2">Presencia, tacto y consciencia</h2>
-      <p class="quote"><span data-i18n="sobre.quote"></span>
+      <div class="eyebrow" data-i18n="sobre.eyebrow">About me</div>
+      <h2 data-i18n="sobre.h2">Presence, touch and awareness</h2>
+      <p class="quote"><span data-i18n="sobre.quote">“Every instrument of healing has its own purpose, its place, and its time. When you need to awaken your energy, massage can be a balm: to be touched with love and presence is often just what the heart needs to open. Some beings, through their hands and their presence, help set the heart free. Let yourself be touched! Open to your own energy, let the life within you stir awake and light your way.”</span>
         <small>— Ketan Raventós Klein, "Sanar el Corazón"</small>
       </p>
       <br>
       <div class="two">
-        <img src="img/retrato.jpg" alt="Shavi en meditación junto al mar en Cala d'Or" data-i18n-alt="sobre.alt">
+        <img src="img/retrato.jpg" alt="Shavi meditating by the sea in Cala d'Or" data-i18n-alt="sobre.alt" loading="lazy" decoding="async">
         <div>
-          <p data-i18n="sobre.p1"></p>
-          <p data-i18n-html="sobre.p2"></p>
-          <p data-i18n="sobre.p3"></p>
+          <p data-i18n="sobre.p1">I am Shavi. I accompany people in reconnecting with their body through tantric massage, a practice that integrates every aspect of the human being: physical, energetic, emotional, mental, and also sexual.</p>
+          <p data-i18n-html="sobre.p2">I trained at the <a href="https://vermakalavati.com/" target="_blank" rel="noopener">Verma Kalavati School</a>, and I work from absolute respect, listening, and presence. My space is in Cala d'Or, a quiet place designed so you can let go and inhabit the moment.</p>
+          <p data-i18n="sobre.p3">Closeness and touch are a natural part of how I relate to others. I find it easy to connect on equal terms and make space for intimacy, without forcing it. In my sessions, that closeness goes hand in hand with attentive listening and respect for your pace and boundaries.</p>
         </div>
       </div>
     </div>
@@ -769,17 +853,17 @@
   <!-- EL MASAJE -->
   <section id="masaje">
     <div class="wrap">
-      <div class="eyebrow" data-i18n="masaje.eyebrow">El masaje</div>
-      <h2 data-i18n="masaje.h2">El Yoga del Tacto</h2>
-      <p class="lead" data-i18n="masaje.lead"></p>
+      <div class="eyebrow" data-i18n="masaje.eyebrow">The massage</div>
+      <h2 data-i18n="masaje.h2">The Yoga of Touch</h2>
+      <p class="lead" data-i18n="masaje.lead">A touch empty of intention that brings presence to every part of the body.</p>
       <div class="two">
         <div>
-          <p data-i18n="masaje.p1"></p>
-          <p data-i18n="masaje.p2"></p>
-          <p data-i18n="masaje.p3"></p>
-          <p data-i18n="masaje.p4"></p>
+          <p data-i18n="masaje.p1">So often we carry our body like a house with its windows closed: tensions we can't trace, areas we've stopped feeling, a breath that stays short. Here there is no rush and nothing to achieve. Just present hands, warm oil, and your breath setting the rhythm.</p>
+          <p data-i18n="masaje.p2">Through conscious touch, supported by the breath, we bring attention to every part of the body. What was rigid softens, what was asleep awakens, and energy begins to flow freely again.</p>
+          <p data-i18n="masaje.p3">Little by little, the energy awakened during the session rises along the central channel to the heart. There, sexuality and affection, which we so often live apart, meet again. From this meeting arise deep relaxation and, at times, states of meditation and expanded awareness.</p>
+          <p data-i18n="masaje.p4">Your body feels inhabited again, and your heart is back home.</p>
         </div>
-        <img src="img/masaje.jpg" alt="Shavi dando masaje">
+        <img src="img/masaje.jpg" alt="Shavi giving a tantric massage with warm oil in Cala d'Or, Mallorca" data-i18n-alt="masaje.alt" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -804,9 +888,9 @@
       <div class="carousel-fade" aria-hidden="true"></div>
       <div class="carousel-content">
         <div class="box">
-          <div class="eyebrow" data-i18n="lugar.eyebrow">El lugar</div>
+          <div class="eyebrow" data-i18n="lugar.eyebrow">The place</div>
           <h2 data-i18n="lugar.h2">Cala d'Or · Mallorca</h2>
-          <p data-i18n="lugar.p"></p>
+          <p data-i18n="lugar.p">Among turquoise coves and pine forests, in the southeast of Mallorca. A serene setting that is part of the experience: the calm of the sea accompanies the work of the body.</p>
           <div class="maps-links">
             <a href="https://maps.app.goo.gl/A8GR3d5qvxoUNCtr5" target="_blank" rel="noopener">Google Maps</a>
             <a href="https://maps.apple.com/?q=Carrer+Francisca+Merlange+07660+Cala+d'Or+Illes+Balears" target="_blank" rel="noopener">Apple Maps</a>
@@ -814,40 +898,40 @@
         </div>
       </div>
       <button type="button" class="carousel-btn prev" data-carousel-prev data-i18n-aria="carousel.prev"
-        aria-label="Foto anterior">‹</button>
+        aria-label="Previous photo">‹</button>
       <button type="button" class="carousel-btn next" data-carousel-next data-i18n-aria="carousel.next"
-        aria-label="Foto siguiente">›</button>
-      <div class="carousel-dots" data-carousel-dots role="tablist" aria-label="Fotos"></div>
+        aria-label="Next photo">›</button>
+      <div class="carousel-dots" data-carousel-dots role="tablist" aria-label="Photos"></div>
     </div>
   </section>
 
   <!-- ============= SECCIÓN TARIFAS — LOS PRECIOS ============= -->
   <section id="tarifas">
     <div class="wrap">
-      <div class="eyebrow" data-i18n="tarifas.eyebrow">Tarifas</div>
-      <h2 data-i18n="tarifas.h2">Sesiones</h2>
-      <p class="lead" data-i18n="tarifas.lead">Precios orientativos.</p>
+      <div class="eyebrow" data-i18n="tarifas.eyebrow">Rates</div>
+      <h2 data-i18n="tarifas.h2">Sessions</h2>
+      <p class="lead" data-i18n="tarifas.lead">All massages are done on a futon on the floor, with warm oil, in a private and comfortable space.</p>
       <div class="tarifas">
         <div class="tarifa">
-          <h3 data-i18n="tarifa1.h3"></h3>
-          <div class="dur" data-i18n="tarifa1.dur"></div>
+          <h3 data-i18n="tarifa1.h3">Warm Oil Relaxing Massage</h3>
+          <div class="dur" data-i18n="tarifa1.dur">60 minutes</div>
           <div class="precio">60€</div>
-          <p data-i18n="tarifa1.p"></p>
+          <p data-i18n="tarifa1.p">A full-body massage with warm oil to release muscle tension and stress. Ideal if it’s your first time.</p>
         </div>
         <div class="tarifa">
-          <h3 data-i18n="tarifa2.h3"></h3>
-          <div class="dur" data-i18n="tarifa2.dur"></div>
+          <h3 data-i18n="tarifa2.h3">Conscious Breathing Massage</h3>
+          <div class="dur" data-i18n="tarifa2.dur">90 minutes</div>
           <div class="precio">90€</div>
-          <p data-i18n="tarifa2.p"></p>
+          <p data-i18n="tarifa2.p">We begin with a conversation to understand what you need. Then, a relaxing massage with diaphragm work to release tension and allow a deeper relaxation.</p>
         </div>
         <div class="tarifa">
-          <h3 data-i18n="tarifa3.h3"></h3>
-          <div class="dur" data-i18n="tarifa3.dur"></div>
+          <h3 data-i18n="tarifa3.h3">Tantric Massage Ritual</h3>
+          <div class="dur" data-i18n="tarifa3.dur">150 minutes</div>
           <div class="precio">160€</div>
-          <p data-i18n="tarifa3.p"></p>
+          <p data-i18n="tarifa3.p">The complete experience: a preliminary conversation, a short opening ritual to bring presence into the body, and a conscious breathing massage, ending with a visceral massage (gentle work on the abdomen) and a traditional massage of the intimate areas, always with your consent and agreed boundaries.</p>
         </div>
       </div>
-      <p class="tarifas-nota" data-i18n="tarifas.nota"></p>
+      <p class="tarifas-nota" data-i18n="tarifas.nota">Sessions in my space in Cala d'Or or at home, provided there is room to lay a futon on the floor.</p>
     </div>
   </section>
   <!-- ============= FIN SECCIÓN TARIFAS ============= -->
@@ -855,9 +939,9 @@
   <!-- CONTACTO -->
   <section id="contacto" class="sri-yantra">
     <div class="wrap contacto">
-      <div class="eyebrow" data-i18n="contacto.eyebrow"></div>
-      <h2 data-i18n="contacto.h2">Reserva tu sesión</h2>
-      <p class="lead" data-i18n="contacto.lead"></p>
+      <div class="eyebrow" data-i18n="contacto.eyebrow">Contact</div>
+      <h2 data-i18n="contacto.h2">Book your session</h2>
+      <p class="lead" data-i18n="contacto.lead">Write to me to arrange a 30-minute call and answer any questions before your first session.</p>
       <div class="btns">
         <a class="btn2" href="mailto:shavitantra@gmail.com">Email</a>
         <a class="btn2" href="https://www.instagram.com/shavitantra/" target="_blank" rel="noopener">Instagram</a>
@@ -868,7 +952,7 @@
 
   <footer>
     <div class="wrap">
-      © <span id="year"></span> Shavi · <span data-i18n="footer.service">Masaje Tántrico</span> · <a
+      © <span id="year"></span> Shavi · <span data-i18n="footer.service">Tantric Massage</span> · <a
         href="https://maps.app.goo.gl/AX9aRwVKLJjkeiaN7" target="_blank" rel="noopener">Cala d'Or, Mallorca</a>
     </div>
   </footer>
@@ -876,58 +960,6 @@
   <script>
     (function () {
       let t = {
-        es: {
-          metaTitle: "Shavi · Masaje Tántrico en Cala d'Or, Mallorca",
-          metaDescription: "Masaje tántrico con Shavi en Cala d'Or, Mallorca. Sesiones en espacio propio o a domicilio. Yoga del tacto, respiración consciente y presencia.",
-          "nav.sobre": "Sobre mí",
-          "nav.masaje": "El masaje",
-          "nav.lugar": "El lugar",
-          "nav.tarifas": "Tarifas",
-          "nav.contacto": "Contacto",
-          "hero.tag": "Masaje Tántrico · Cala d'Or, Mallorca",
-          "hero.quote": "\"Todos los caminos auténticos llevan a la misma realidad última.\"",
-          "hero.cta": "Reservar una sesión",
-          "sobre.eyebrow": "Sobre mí",
-          "sobre.h2": "Presencia, tacto y consciencia",
-          "sobre.quote": "“Cada instrumento de sanación tiene su función, su lugar y su momento. Si necesitas despertar tu energía, recibir masajes —ser tocado con amor y presencia—, puede ser muy curativo, justamente lo que necesitas para abrir el corazón. Hay seres que a través de sus manos y presencia ayudan a liberar el corazón. ¡Déjate tocar! Ábrete a tu energía, permite que la vida que hay dentro de tí despierte y te muestre el camino.“",
-          "sobre.p1": "Soy Shavi. Acompaño a personas a reconectar con su cuerpo a través del masaje tántrico, una práctica que integra todos los aspectos del ser humano: físico, energético, emocional, mental y también sexual.",
-          "sobre.p2": "Me formé en la <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Escuela Verma Kalavati</a>, y trabajo desde el respeto absoluto, la escucha y la presencia. Mi espacio está en Cala d'Or, un lugar tranquilo, pensado para que puedas soltar y habitar el momento.",
-          "sobre.p3": "La cercanía y el contacto son parte natural de mi manera de relacionarme. Me resulta fácil conectar de tú a tú y dar espacio a lo íntimo, sin necesidad de forzarlo. En mis sesiones, esa cercanía se une a la escucha y al respeto por tu ritmo y tus límites.",
-          "sobre.alt": "Shavi en meditación junto al mar en Cala d'Or",
-          "masaje.eyebrow": "El masaje",
-          "masaje.h2": "El Yoga del Tacto",
-          "masaje.lead": "Un toque vacío de intención que lleva presencia a cada zona del cuerpo.",
-          "masaje.p1": "Muchas veces llevamos el cuerpo como una casa con las ventanas cerradas: tensiones que no sabemos de dónde vienen, zonas que dejamos de sentir, una respiración que se queda corta. Aquí no hay prisa ni nada que conseguir. Solo manos presentes, aceite caliente y tu respiración marcando el ritmo.",
-          "masaje.p2": "Con el toque consciente y apoyándonos en la respiración, llevamos atención a cada zona del cuerpo. Lo que estaba rígido se ablanda, lo que estaba dormido despierta, y la energía vuelve a circular con libertad.",
-          "masaje.p3": "Poco a poco, la energía que se despierta durante la sesión asciende por el canal central hasta el corazón. Ahí se reencuentran la sexualidad y el afecto, que tantas veces vivimos separados. De ese encuentro nacen una relajación profunda y, a veces, estados de meditación y de conciencia expandida.",
-          "masaje.p4": "Tu cuerpo vuelve a sentirse habitado, y tu corazón vuelve a estar en casa.",
-          "lugar.eyebrow": "El lugar",
-          "lugar.h2": "Cala d'Or · Mallorca",
-          "lugar.p": "Entre calas de agua turquesa y pinares, al sureste de Mallorca. Un entorno sereno que forma parte de la experiencia: la calma del mar acompaña el trabajo del cuerpo.",
-          "lugar.alt": "Cala d'Or, Mallorca",
-          "carousel.label": "Fotos de Cala d'Or",
-          "carousel.prev": "Foto anterior",
-          "carousel.next": "Foto siguiente",
-          "carousel.dots": "Fotos",
-          "carousel.goto": "Ir a la foto",
-          "tarifas.eyebrow": "Tarifas",
-          "tarifas.h2": "Sesiones",
-          "tarifas.lead": "Todos los masajes se realizan sobre un futón en el suelo, con aceite tibio, en un espacio privado y cómodo.",
-          "tarifa1.h3": "Masaje relajante con aceite caliente",
-          "tarifa1.dur": "60 minutos",
-          "tarifa1.p": "Un masaje de cuerpo completo con aceite caliente para soltar la tensión muscular y el estrés. Ideal si es tu primera vez.",
-          "tarifa2.h3": "Masaje de respiración consciente",
-          "tarifa2.dur": "90 minutos",
-          "tarifa2.p": "Empezamos con una conversación para conocer qué necesitas. Después, el masaje relajante con trabajo de diafragma para soltar tensión y facilitar una relajación más profunda.",
-          "tarifa3.h3": "Ritual de masaje tántrico",
-          "tarifa3.dur": "150 minutos",
-          "tarifa3.p": "La experiencia completa: una conversación previa, un breve ritual de apertura para traer presencia al cuerpo y un masaje de respiración consciente, terminando con un masaje visceral (trabajo suave sobre el abdomen) y un masaje tradicional de zonas íntimas, siempre con tu consentimiento y límites acordados.",
-          "tarifas.nota": "Sesiones en mi espacio de Cala d'Or o a domicilio, siempre que dispongas de sitio para instalar un futón en el suelo.",
-          "contacto.eyebrow": "Contacto",
-          "contacto.h2": "Reserva tu sesión",
-          "contacto.lead": "Escríbeme para concertar una llamada de 30 minutos y resolver cualquier duda antes de tu primera sesión.",
-          "footer.service": "Masaje Tántrico"
-        },
         en: {
           metaTitle: "Shavi · Tantric Massage in Cala d'Or, Mallorca",
           metaDescription: "Tantric massage with Shavi in Cala d'Or, Mallorca. Sessions in my own space or at home. Yoga of touch, conscious breathing, and presence.",
@@ -948,6 +980,7 @@
           "sobre.alt": "Shavi meditating by the sea in Cala d'Or",
           "masaje.eyebrow": "The massage",
           "masaje.h2": "The Yoga of Touch",
+          "masaje.alt": "Shavi giving a tantric massage with warm oil in Cala d'Or, Mallorca",
           "masaje.lead": "A touch empty of intention that brings presence to every part of the body.",
           "masaje.p1": "So often we carry our body like a house with its windows closed: tensions we can't trace, areas we've stopped feeling, a breath that stays short. Here there is no rush and nothing to achieve. Just present hands, warm oil, and your breath setting the rhythm.",
           "masaje.p2": "Through conscious touch, supported by the breath, we bring attention to every part of the body. What was rigid softens, what was asleep awakens, and energy begins to flow freely again.",
@@ -980,6 +1013,59 @@
           "contacto.lead": "Write to me to arrange a 30-minute call and answer any questions before your first session.",
           "footer.service": "Tantric Massage"
         },
+        es: {
+          metaTitle: "Shavi · Masaje Tántrico en Cala d'Or, Mallorca",
+          metaDescription: "Masaje tántrico con Shavi en Cala d'Or, Mallorca. Sesiones en espacio propio o a domicilio. Yoga del tacto, respiración consciente y presencia.",
+          "nav.sobre": "Sobre mí",
+          "nav.masaje": "El masaje",
+          "nav.lugar": "El lugar",
+          "nav.tarifas": "Tarifas",
+          "nav.contacto": "Contacto",
+          "hero.tag": "Masaje Tántrico · Cala d'Or, Mallorca",
+          "hero.quote": "\"Todos los caminos auténticos llevan a la misma realidad última.\"",
+          "hero.cta": "Reservar una sesión",
+          "sobre.eyebrow": "Sobre mí",
+          "sobre.h2": "Presencia, tacto y consciencia",
+          "sobre.quote": "“Cada instrumento de sanación tiene su función, su lugar y su momento. Si necesitas despertar tu energía, recibir masajes —ser tocado con amor y presencia—, puede ser muy curativo, justamente lo que necesitas para abrir el corazón. Hay seres que a través de sus manos y presencia ayudan a liberar el corazón. ¡Déjate tocar! Ábrete a tu energía, permite que la vida que hay dentro de ti despierte y te muestre el camino.”",
+          "sobre.p1": "Soy Shavi. Acompaño a personas a reconectar con su cuerpo a través del masaje tántrico, una práctica que integra todos los aspectos del ser humano: físico, energético, emocional, mental y también sexual.",
+          "sobre.p2": "Me formé en la <a href=\"https://vermakalavati.com/\" target=\"_blank\" rel=\"noopener\">Escuela Verma Kalavati</a>, y trabajo desde el respeto absoluto, la escucha y la presencia. Mi espacio está en Cala d'Or, un lugar tranquilo, pensado para que puedas soltar y habitar el momento.",
+          "sobre.p3": "La cercanía y el contacto son parte natural de mi manera de relacionarme. Me resulta fácil conectar de tú a tú y dar espacio a lo íntimo, sin necesidad de forzarlo. En mis sesiones, esa cercanía se une a la escucha y al respeto por tu ritmo y tus límites.",
+          "sobre.alt": "Shavi en meditación junto al mar en Cala d'Or",
+          "masaje.eyebrow": "El masaje",
+          "masaje.h2": "El Yoga del Tacto",
+          "masaje.alt": "Shavi dando un masaje tántrico con aceite caliente en Cala d'Or, Mallorca",
+          "masaje.lead": "Un toque vacío de intención que lleva presencia a cada zona del cuerpo.",
+          "masaje.p1": "Muchas veces llevamos el cuerpo como una casa con las ventanas cerradas: tensiones que no sabemos de dónde vienen, zonas que dejamos de sentir, una respiración que se queda corta. Aquí no hay prisa ni nada que conseguir. Solo manos presentes, aceite caliente y tu respiración marcando el ritmo.",
+          "masaje.p2": "Con el toque consciente y apoyándonos en la respiración, llevamos atención a cada zona del cuerpo. Lo que estaba rígido se ablanda, lo que estaba dormido despierta, y la energía vuelve a circular con libertad.",
+          "masaje.p3": "Poco a poco, la energía que se despierta durante la sesión asciende por el canal central hasta el corazón. Ahí se reencuentran la sexualidad y el afecto, que tantas veces vivimos separados. De ese encuentro nacen una relajación profunda y, a veces, estados de meditación y de conciencia expandida.",
+          "masaje.p4": "Tu cuerpo vuelve a sentirse habitado, y tu corazón vuelve a estar en casa.",
+          "lugar.eyebrow": "El lugar",
+          "lugar.h2": "Cala d'Or · Mallorca",
+          "lugar.p": "Entre calas de agua turquesa y pinares, al sureste de Mallorca. Un entorno sereno que forma parte de la experiencia: la calma del mar acompaña el trabajo del cuerpo.",
+          "lugar.alt": "Cala d'Or, Mallorca",
+          "carousel.label": "Fotos de Cala d'Or",
+          "carousel.prev": "Foto anterior",
+          "carousel.next": "Foto siguiente",
+          "carousel.dots": "Fotos",
+          "carousel.goto": "Ir a la foto",
+          "tarifas.eyebrow": "Tarifas",
+          "tarifas.h2": "Sesiones",
+          "tarifas.lead": "Todos los masajes se realizan sobre un futón en el suelo, con aceite tibio, en un espacio privado y cómodo.",
+          "tarifa1.h3": "Masaje relajante con aceite caliente",
+          "tarifa1.dur": "60 minutos",
+          "tarifa1.p": "Un masaje de cuerpo completo con aceite caliente para soltar la tensión muscular y el estrés. Ideal si es tu primera vez.",
+          "tarifa2.h3": "Masaje de respiración consciente",
+          "tarifa2.dur": "90 minutos",
+          "tarifa2.p": "Empezamos con una conversación para conocer qué necesitas. Después, el masaje relajante con trabajo de diafragma para soltar tensión y facilitar una relajación más profunda.",
+          "tarifa3.h3": "Ritual de masaje tántrico",
+          "tarifa3.dur": "150 minutos",
+          "tarifa3.p": "La experiencia completa: una conversación previa, un breve ritual de apertura para traer presencia al cuerpo y un masaje de respiración consciente, terminando con un masaje visceral (trabajo suave sobre el abdomen) y un masaje tradicional de zonas íntimas, siempre con tu consentimiento y límites acordados.",
+          "tarifas.nota": "Sesiones en mi espacio de Cala d'Or o a domicilio, siempre que dispongas de sitio para instalar un futón en el suelo.",
+          "contacto.eyebrow": "Contacto",
+          "contacto.h2": "Reserva tu sesión",
+          "contacto.lead": "Escríbeme para concertar una llamada de 30 minutos y resolver cualquier duda antes de tu primera sesión.",
+          "footer.service": "Masaje Tántrico"
+        },
         fr: {
           metaTitle: "Shavi · Massage Tantrique à Cala d'Or, Majorque",
           metaDescription: "Massage tantrique avec Shavi à Cala d'Or, Majorque. Séances dans mon espace ou à domicile. Yoga du toucher, respiration consciente et présence.",
@@ -1000,6 +1086,7 @@
           "sobre.alt": "Shavi en méditation près de la mer à Cala d’Or",
           "masaje.eyebrow": "Le massage",
           "masaje.h2": "Le Yoga du Toucher",
+          "masaje.alt": "Shavi donnant un massage tantrique à l’huile chaude à Cala d’Or, Majorque",
           "masaje.lead": "Un toucher vide d'intention qui apporte de la présence à chaque zone du corps.",
           "masaje.p1": "Bien souvent, nous portons notre corps comme une maison aux volets fermés : des tensions dont nous ignorons l'origine, des zones que nous ne sentons plus, une respiration qui reste courte. Ici, il n'y a ni hâte ni rien à accomplir. Seulement des mains présentes, de l'huile chaude et votre respiration qui donne le rythme.",
           "masaje.p2": "Par le toucher conscient, en nous appuyant sur la respiration, nous portons l'attention à chaque zone du corps. Ce qui était rigide s'assouplit, ce qui était endormi s'éveille, et l'énergie recommence à circuler librement.",
@@ -1052,6 +1139,7 @@
           "sobre.alt": "Shavi em meditação junto ao mar em Cala d’Or",
           "masaje.eyebrow": "A massagem",
           "masaje.h2": "O Yoga do Toque",
+          "masaje.alt": "Shavi a dar uma massagem tântrica com óleo quente em Cala d’Or, Maiorca",
           "masaje.lead": "Um toque vazio de intenção que leva presença a cada zona do corpo.",
           "masaje.p1": "Muitas vezes levamos o corpo como uma casa com as janelas fechadas: tensões cuja origem desconhecemos, zonas que deixámos de sentir, uma respiração que fica curta. Aqui não há pressa nem nada a alcançar. Apenas mãos presentes, óleo quente e a sua respiração a marcar o ritmo.",
           "masaje.p2": "Com o toque consciente e apoiando-nos na respiração, levamos atenção a cada zona do corpo. O que estava rígido amolece, o que estava adormecido desperta, e a energia volta a circular livremente.",
@@ -1108,15 +1196,20 @@
         } catch (e) {
           console.error(e);
         }
-        const nav = (navigator.language || navigator.userLanguage || "es").slice(0, 2).toLowerCase();
-        if (nav === "de" || nav === "en") return nav;
-        return "es";
+        // Los buscadores deben ver la versión principal en inglés (público objetivo extranjero);
+        // las demás versiones las encuentran por los enlaces hreflang (?lang=es, ?lang=fr…).
+        if (/bot|crawl|spider|slurp|lighthouse|facebookexternalhit|whatsapp/i.test(navigator.userAgent || "")) return "en";
+        const nav = (navigator.language || navigator.userLanguage || "en").slice(0, 2).toLowerCase();
+        if (t[nav]) return nav;
+        return "en";
       }
 
       function updateUrl(lang) {
         try {
           const url = new URL(window.location.href);
-          url.searchParams.set("lang", lang);
+          // El inglés es la URL principal, sin ?lang (coincide con la canónica).
+          if (lang === "en") url.searchParams.delete("lang");
+          else url.searchParams.set("lang", lang);
           // Keep hash (e.g. #contacto) if present
           history.replaceState(null, "", url.pathname + url.search + url.hash);
         } catch (e) {
@@ -1125,7 +1218,7 @@
       }
 
       function setLang(lang, opts) {
-        if (!t[lang]) lang = "es";
+        if (!t[lang]) lang = "en";
         opts = opts || {
           updateUrl: undefined
         };
@@ -1135,6 +1228,11 @@
         document.title = dict.metaTitle;
         let meta = document.querySelector('meta[name="description"]');
         if (meta) meta.setAttribute("content", dict.metaDescription);
+        let pageUrl = "https://shavitantra.com/" + (lang === "en" ? "" : "?lang=" + lang);
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute("href", pageUrl);
+        let ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", pageUrl);
 
         document.querySelectorAll("[data-i18n]").forEach(function (el) {
           let key = el.dataset.i18n;
