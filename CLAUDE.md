@@ -5,10 +5,11 @@ Sitio estático publicado con GitHub Pages en `shavitantra.github.io`.
 
 ## Estructura
 
-- `index.html` — Toda la web: HTML + CSS (dentro de `<style>`) + un `<script>` mínimo (año del footer). No hay build ni dependencias.
+- `index.html` — HTML + `<script>` final (idiomas, año del footer). No hay build ni dependencias.
+- `css/styles.css` — Todos los estilos. Las rutas `url()` son relativas a `css/` (usa `../img/`, `../fonts/`).
 - `img/` — Imágenes. Usadas por la web: `logo.png` (logo Ganesha de marca, en nav + hero + favicon), `hero.jpg`, `retrato.jpg`, `cala.jpg`. Hay más imágenes en la carpeta (nataraja, ganesha, sri-yantra…) aún sin usar.
 - `fonts/` — `Arsenica-Regular.woff2` (fuente de marca, usada en cabeceras).
-- No hay `css/`, `js/` ni framework: todo vive en `index.html`.
+- No hay `js/` ni framework.
 
 ## Secciones de la página
 
@@ -25,7 +26,7 @@ Sitio estático publicado con GitHub Pages en `shavitantra.github.io`.
 - `robots.txt` y `sitemap.xml` en la raíz. Al cambiar contenido importante, actualiza `<lastmod>` del sitemap.
 - Los bots siempre ven la versión en inglés (ver `getLang()`).
 - **Fotos** → sustituye los archivos en `/img` manteniendo el mismo nombre, o cambia las rutas `src="img/..."`.
-- **Colores** → variables CSS en `:root`.
+- **Colores** → variables CSS en `:root` de `css/styles.css`.
 - **Fuentes**:
   - **Cabeceras** (`--font-head`, `h2`/`h3`) → **Arsenica** (`fonts/Arsenica-Regular.woff2`). ⚠️ Es la versión *Trial* (CC BY-NC); para uso comercial hay que sustituirla por la licencia de pago de Zetafonts.
   - **Cuerpo** (`--font-body`) → Cormorant (Google Fonts).
@@ -36,7 +37,7 @@ Sitio estático publicado con GitHub Pages en `shavitantra.github.io`.
 ## Convenciones
 
 - Idioma por defecto del sitio: **inglés** (`lang="en"`), el público objetivo es extranjero; español/francés/portugués via `?lang=xx`. Escribe comentarios de código en español.
-- Mantén el CSS inline dentro de `index.html`; el proyecto es intencionadamente simple, sin build tools.
+- Los estilos van en `css/styles.css`; el proyecto es intencionadamente simple, sin build tools.
 - Diseño sobrio y elegante: paleta crema/dorado, tipografías serif.
 
 ## Contacto / enlaces del negocio
