@@ -311,7 +311,8 @@ header.hero {
   letter-spacing: .14em;
   text-transform: none;
   color: var(--gold-deep);
-  line-height: 1
+  line-height: 1;
+  text-shadow: 0 0 24px rgba(176, 138, 79, .4)
 }
 
 @media(max-width:640px) {
@@ -329,6 +330,7 @@ header.hero {
   text-transform: uppercase;
   font-size: .90rem;
   margin-top: 18px;
+  text-shadow: none;
 }
 
 .quote {
@@ -410,7 +412,9 @@ h2 {
   font-size: 2.3rem;
   letter-spacing: .04em;
   margin-bottom: 38px;
-  color: var(--ink)
+  color: var(--ink);
+  /* Glow dorado muy suave (prueba) */
+  text-shadow: 0 0 22px rgba(176, 138, 79, .35)
 }
 
 p {
@@ -905,9 +909,8 @@ section:nth-of-type(even) .tarifa {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url("/img/sri-yantra.jpg") center / min(100%, 600px) no-repeat;
-  mix-blend-mode: multiply;
-  opacity: 0.06;
+  background: url("../img/sri-yantra-claro.png") center / min(100%, 600px) no-repeat;
+  opacity: .9;
   pointer-events: none;
 }
 
