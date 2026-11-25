@@ -848,6 +848,7 @@ section:nth-of-type(even) .tarifa {
   min-height: 20em;
 }
 
+/* Fondo Sri Yantra: ahora sin usar. Para recuperarlo, añade class="sri-yantra" a una <section> */
 .sri-yantra {
   position: relative;
   overflow: hidden;           /* evita que el yantra desborde */
