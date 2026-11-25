@@ -133,15 +133,13 @@
   /* Photo carousel (El lugar) */
   (function initCarousels() {
     let reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let intervalMs = 5500;
+    let intervalMs = 3300;
 
     document.querySelectorAll("[data-carousel]").forEach(function (root) {
       let slides = Array.prototype.slice.call(root.querySelectorAll(".carousel-slide"));
       if (slides.length < 2) return;
 
       let dotsWrap = root.querySelector("[data-carousel-dots]");
-      let prevBtn = root.querySelector("[data-carousel-prev]");
-      let nextBtn = root.querySelector("[data-carousel-next]");
       let index = Math.max(0, slides.findIndex(function (s) { return s.classList.contains("is-active"); }));
       let timer = null;
       let touchX = null;
@@ -179,9 +177,6 @@
         timer = setInterval(next, intervalMs);
       }
       function restart() { stop(); start(); }
-
-      if (prevBtn) prevBtn.addEventListener("click", function () { prev(); restart(); });
-      if (nextBtn) nextBtn.addEventListener("click", function () { next(); restart(); });
 
       root.addEventListener("mouseenter", stop);
       root.addEventListener("mouseleave", start);
