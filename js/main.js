@@ -215,6 +215,52 @@
     });
   })();
 
+  /* Carrusel de testimonios: las flechas avanzan una columna; en móvil también se desliza con el dedo */
+  document.querySelectorAll("[data-testimonios]").forEach(function (root) {
+    let track = root.querySelector(".testimonios-track");
+    let prevBtn = root.querySelector("[data-testimonios-prev]");
+    let nextBtn = root.querySelector("[data-testimonios-next]");
+
+    function step() {
+      let card = track.querySelector(".testimonio");
+      let gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+    }
+
+    // Desactiva las flechas al llegar a un extremo y las oculta si caben todos
+    function updateButtons() {
+      let max = track.scrollWidth - track.clientWidth;
+      let hidden = max <= 1;
+      prevBtn.hidden = nextBtn.hidden = hidden;
+      prevBtn.disabled = track.scrollLeft <= 1;
+      nextBtn.disabled = track.scrollLeft >= max - 1;
+    }
+
+    prevBtn.addEventListener("click", function () { track.scrollBy({ left: -step() }); });
+    nextBtn.addEventListener("click", function () { track.scrollBy({ left: step() }); });
+    track.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); track.scrollBy({ left: -step() }); }
+      if (e.key === "ArrowRight") { e.preventDefault(); track.scrollBy({ left: step() }); }
+    });
+    track.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  });
+
+  /* Vídeos de testimonios: se descargan solo al pulsar (página más rápida) */
+  document.querySelectorAll(".video-facade[data-video]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      let video = document.createElement("video");
+      video.src = btn.dataset.video;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.setAttribute("aria-label", btn.textContent.trim());
+      btn.replaceWith(video);
+      video.play().catch(function () {});
+    });
+  });
+
   // Traduce la página (después del carrusel, para que también traduzca sus botones)
   setLang(getLang());
 })();

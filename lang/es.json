@@ -4,6 +4,7 @@
   "nav.sobre": "Sobre mí",
   "nav.masaje": "El masaje",
   "nav.lugar": "El lugar",
+  "nav.testimonios": "Testimonios",
   "nav.tarifas": "Tarifas",
   "nav.contacto": "Contacto",
   "hero.tag": "Masaje Tántrico · Mallorca",
@@ -49,5 +50,14 @@
   "contacto.eyebrow": "Contacto",
   "contacto.h2": "Reserva tu sesión",
   "contacto.lead": "Escríbeme para concertar una llamada de 30 minutos y resolver cualquier duda antes de tu primera sesión.",
-  "footer.service": "Masaje Tántrico"
+  "footer.service": "Masaje Tántrico",
+  "testimonios.eyebrow": "Testimonios",
+  "testimonios.h2": "En sus palabras",
+  "testimonios.video": "Ver el testimonio en vídeo",
+  "testimonios.prev": "Testimonio anterior",
+  "testimonios.next": "Testimonio siguiente",
+  "testimonio1.texto": "Me sentí cómoda y segura durante toda la sesión. Al principio me explicó el proceso y me preguntó por mis límites; durante el masaje comprobaba si la presión era adecuada y me avisaba antes de cada paso. Velas por todas partes, un altar con Shiva, música sensual y la lluvia fuera: un regalo del universo. Me sentí poderosa, alegre y conectada con mi feminidad y mi masculinidad a la vez.",
+  "testimonio2.texto": "Desde la bienvenida me sentí increíblemente segura, y en la entrevista, cómoda, como si le conociera de antes. Durante el masaje me sentí cuidada, respetada y acompañada. Shavi es puro amor: sin duda, el mejor masaje que me han dado en mi vida.",
+  "testimonio3.texto": "Mucha conexión y presencia. Música espectacular y un ambiente evocador. Salí vibrante, alegre y llena de energía vital, conectada a la vida, en estado de flow. Hacen falta más masajistas como tú.",
+  "testimonio4.texto": "Estaba súper nervioso, pero la explicación y el mate ayudaron a bajar mis nervios, y todo me llevó a la calma. Me sentí muy cómodo y cuidado. Fue como abrir una experiencia nueva: salí con energía, con la sensación de haber descubierto algo nuevo."
 }

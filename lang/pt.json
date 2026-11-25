@@ -4,6 +4,7 @@
   "nav.sobre": "Sobre mim",
   "nav.masaje": "A massagem",
   "nav.lugar": "O lugar",
+  "nav.testimonios": "Testemunhos",
   "nav.tarifas": "Tarifas",
   "nav.contacto": "Contacto",
   "hero.tag": "Massagem Tântrica · Maiorca",
@@ -49,5 +50,14 @@
   "contacto.eyebrow": "Contacto",
   "contacto.h2": "Reserva a tua sessão",
   "contacto.lead": "Escreve-me para marcarmos uma chamada de 30 minutos e esclarecer qualquer dúvida antes da tua primeira sessão.",
-  "footer.service": "Massagem Tântrica"
+  "footer.service": "Massagem Tântrica",
+  "testimonios.eyebrow": "Testemunhos",
+  "testimonios.h2": "Nas palavras deles",
+  "testimonios.video": "Ver o testemunho em vídeo",
+  "testimonios.prev": "Testemunho anterior",
+  "testimonios.next": "Testemunho seguinte",
+  "testimonio1.texto": "Senti-me confortável e segura durante toda a sessão. No início explicou-me o processo e perguntou-me pelos meus limites; durante a massagem confirmava se a pressão era adequada e avisava-me antes de cada passo. Velas por todo o lado, um altar com Shiva, música sensual e a chuva lá fora: um presente do universo. Senti-me poderosa, alegre e ligada à minha feminilidade e à minha masculinidade ao mesmo tempo.",
+  "testimonio2.texto": "Desde a receção senti-me incrivelmente segura e, na conversa inicial, confortável, como se já o conhecesse. Durante a massagem senti-me cuidada, respeitada e acompanhada. O Shavi é puro amor: sem dúvida, a melhor massagem que já recebi.",
+  "testimonio3.texto": "Muita ligação e presença. Música espetacular e um ambiente evocador. Saí vibrante, alegre e cheia de energia vital, ligada à vida, em estado de flow. Fazem falta mais massagistas como tu.",
+  "testimonio4.texto": "Estava muito nervoso, mas a explicação e o mate ajudaram a acalmar-me, e tudo me levou à calma. Senti-me muito confortável e cuidado. Foi como abrir-me a uma experiência nova: saí cheio de energia, com a sensação de ter descoberto algo novo."
 }

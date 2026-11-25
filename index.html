@@ -137,6 +137,7 @@
           <a href="#sobre" data-i18n="nav.sobre">About me</a>
           <a href="#masaje" data-i18n="nav.masaje">The massage</a>
           <a href="#lugar" data-i18n="nav.lugar">The place</a>
+          <a href="#testimonios" data-i18n="nav.testimonios">Testimonials</a>
           <a href="#tarifas" data-i18n="nav.tarifas">Rates</a>
           <a href="#contacto" data-i18n="nav.contacto">Contact</a>
         </div>
@@ -234,6 +235,46 @@
       <div class="carousel-dots" data-carousel-dots role="tablist" aria-label="Photos"></div>
     </div>
   </section>
+
+  <!-- ============= SECCIÓN TESTIMONIOS =============
+       Para añadir uno: copia un <figure class="testimonio"> dentro de .testimonios-track,
+       cambia el número de data-i18n (testimonio5…) y añade su texto en lang/*.json. -->
+  <section id="testimonios">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="testimonios.eyebrow">Testimonials</div>
+      <h2 data-i18n="testimonios.h2">In their words</h2>
+      <div class="testimonios" data-testimonios>
+        <div class="testimonios-track" tabindex="0" role="region" aria-label="Testimonials" data-i18n-aria="testimonios.h2">
+          <figure class="testimonio">
+            <blockquote data-i18n="testimonio1.texto">I felt comfortable and safe throughout the whole session. At the start he explained the process and asked about my boundaries; during the massage he checked that the pressure was right and told me before each step. Candles everywhere, an altar with Shiva, sensual music and rain falling outside: a gift from the universe. I felt powerful, joyful and connected to my femininity and masculinity at the same time.</blockquote>
+            <figcaption>Sinem</figcaption>
+          </figure>
+          <figure class="testimonio">
+            <blockquote data-i18n="testimonio2.texto">From the welcome I felt incredibly safe, and during the first conversation, comfortable, as if I had known him before. During the massage I felt cared for, respected and accompanied. Shavi is pure love: without a doubt, the best massage I have ever had.</blockquote>
+            <figcaption>Ángela</figcaption>
+          </figure>
+          <!-- Vídeo (img/nadia.mp4): no se descarga hasta que se pulsa -->
+          <figure class="testimonio testimonio-video">
+            <button type="button" class="video-facade" data-video="img/nadia.mp4">
+              <span class="play" aria-hidden="true">▶</span>
+              <span data-i18n="testimonios.video">Watch the video testimonial</span>
+            </button>
+          </figure>
+          <figure class="testimonio">
+            <blockquote data-i18n="testimonio3.texto">So much connection and presence. Spectacular music and an evocative atmosphere. I left vibrant, joyful and full of vital energy, connected to life, in a state of flow. We need more massage therapists like you.</blockquote>
+            <figcaption>Susana</figcaption>
+          </figure>
+          <figure class="testimonio">
+            <blockquote data-i18n="testimonio4.texto">I was really nervous, but the explanation and the mate helped calm my nerves, and everything led me into calm. I felt very comfortable and cared for. It was like opening up to a new experience: I left energised, feeling I had discovered something new.</blockquote>
+            <figcaption>Francisco</figcaption>
+          </figure>
+        </div>
+        <button type="button" class="testimonios-btn prev" data-testimonios-prev data-i18n-aria="testimonios.prev" aria-label="Previous testimonial">‹</button>
+        <button type="button" class="testimonios-btn next" data-testimonios-next data-i18n-aria="testimonios.next" aria-label="Next testimonial">›</button>
+      </div>
+    </div>
+  </section>
+  <!-- ============= FIN SECCIÓN TESTIMONIOS ============= -->
 
   <!-- ============= SECCIÓN TARIFAS — LOS PRECIOS ============= -->
   <section id="tarifas">

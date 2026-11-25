@@ -15,7 +15,9 @@ Sitio estático publicado con GitHub Pages en `shavitantra.github.io`.
 
 ## Secciones de la página
 
-`Sobre mí` · `El masaje` (Yoga del Tacto) · `El lugar` (Cala d'Or) · `Tarifas` · `Contacto`.
+`Sobre mí` · `El masaje` (Yoga del Tacto) · `El lugar` (Cala d'Or) · `Testimonios` · `Tarifas` · `Contacto`.
+
+**Testimonios** → carrusel en columnas (`SECCIÓN TESTIMONIOS` en `index.html`). Para añadir uno, copia un `<figure class="testimonio">`, usa la siguiente clave `testimonioN.texto` y añade su texto en los 4 `lang/*.json`. Los vídeos van en `img/` (p. ej. `img/nadia.mp4`) y usan un botón (`data-video="img/..."`) que solo descarga el vídeo al pulsarlo. Publica solo testimonios con permiso de la persona.
 
 ## Cómo editar (guía para Xavi)
 

@@ -4,6 +4,7 @@
   "nav.sobre": "About me",
   "nav.masaje": "The massage",
   "nav.lugar": "The place",
+  "nav.testimonios": "Testimonials",
   "nav.tarifas": "Rates",
   "nav.contacto": "Contact",
   "hero.tag": "Tantric Massage · Mallorca",
@@ -49,5 +50,14 @@
   "contacto.eyebrow": "Contact",
   "contacto.h2": "Book your session",
   "contacto.lead": "Write to me to arrange a 30-minute call and answer any questions before your first session.",
-  "footer.service": "Tantric Massage"
+  "footer.service": "Tantric Massage",
+  "testimonios.eyebrow": "Testimonials",
+  "testimonios.h2": "In their words",
+  "testimonios.video": "Watch the video testimonial",
+  "testimonios.prev": "Previous testimonial",
+  "testimonios.next": "Next testimonial",
+  "testimonio1.texto": "I felt comfortable and safe throughout the whole session. At the start he explained the process and asked about my boundaries; during the massage he checked that the pressure was right and told me before each step. Candles everywhere, an altar with Shiva, sensual music and rain falling outside: a gift from the universe. I felt powerful, joyful and connected to my femininity and masculinity at the same time.",
+  "testimonio2.texto": "From the welcome I felt incredibly safe, and during the first conversation, comfortable, as if I had known him before. During the massage I felt cared for, respected and accompanied. Shavi is pure love: without a doubt, the best massage I have ever had.",
+  "testimonio3.texto": "So much connection and presence. Spectacular music and an evocative atmosphere. I left vibrant, joyful and full of vital energy, connected to life, in a state of flow. We need more massage therapists like you.",
+  "testimonio4.texto": "I was really nervous, but the explanation and the mate helped calm my nerves, and everything led me into calm. I felt very comfortable and cared for. It was like opening up to a new experience: I left energised, feeling I had discovered something new."
 }
