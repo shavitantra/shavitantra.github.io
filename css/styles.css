@@ -76,6 +76,8 @@ nav {
 }
 
 nav .wrap {
+  /* El menú es más ancho que el resto de la página para que quepan todos los enlaces en una línea */
+  max-width: 1180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,6 +120,7 @@ nav .wrap {
 }
 
 .nav-links a {
+  white-space: nowrap;
   color: var(--ink-soft);
   text-decoration: none;
   transition: color .2s
@@ -159,9 +162,117 @@ nav .wrap {
   background: rgba(176, 138, 79, .08);
 }
 
-@media(max-width:640px) {
+/* Botón hamburguesa: tres rayas (la del medio es el span, las otras sus ::before/::after) */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  position: relative
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 1.5px;
+  background: var(--gold-deep);
+  transition: transform .25s, opacity .2s
+}
+
+.nav-toggle span {
+  top: 50%
+}
+
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: "";
+  left: 0
+}
+
+.nav-toggle span::before {
+  top: -6px
+}
+
+.nav-toggle span::after {
+  top: 6px
+}
+
+/* Abierto: las rayas forman una X */
+nav.open .nav-toggle span {
+  background: transparent
+}
+
+nav.open .nav-toggle span::before {
+  transform: translateY(6px) rotate(45deg)
+}
+
+nav.open .nav-toggle span::after {
+  transform: translateY(-6px) rotate(-45deg)
+}
+
+/* Pantallas estrechas: los enlaces pasan a un desplegable bajo la barra */
+@media(max-width:1000px) {
+  .nav-toggle {
+    display: block
+  }
+
+  .nav-right {
+    gap: 10px
+  }
+
   .nav-links {
-    display: none
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0 14px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 10px 20px rgba(61, 52, 42, .08)
+  }
+
+  nav.open .nav-links {
+    display: flex
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+    font-size: .9rem
+  }
+}
+
+/* Móvil: barra más compacta para que quepan logo, idiomas y botón de menú */
+@media(max-width:480px) {
+  nav .wrap {
+    padding: 0 12px;
+    gap: 8px
+  }
+
+  .brand {
+    font-size: 1.2rem;
+    gap: 8px
+  }
+
+  .brand img {
+    height: 30px
+  }
+
+  .nav-right {
+    gap: 4px
+  }
+
+  .lang-switch button {
+    padding: 5px 4px
   }
 }
 

@@ -133,7 +133,7 @@
     <div class="wrap">
       <a class="brand" href="#"><img src="img/logo.png" alt="Logo Shavi Tantra"><span>Shavi</span></a>
       <div class="nav-right">
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
           <a href="#sobre" data-i18n="nav.sobre">About me</a>
           <a href="#masaje" data-i18n="nav.masaje">The massage</a>
           <a href="#lugar" data-i18n="nav.lugar">The place</a>
@@ -147,6 +147,10 @@
           <button type="button" data-lang="fr" aria-pressed="false" title="Français">FR</button>
           <button type="button" data-lang="pt" aria-pressed="false" title="Portugês">PT</button>
         </div>
+        <!-- Botón de menú (solo en pantallas estrechas) -->
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu" data-i18n-aria="nav.menu">
+          <span aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </nav>

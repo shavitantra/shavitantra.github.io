@@ -247,6 +247,22 @@
     updateButtons();
   });
 
+  /* Menú móvil: el botón abre/cierra los enlaces; al pulsar un enlace se cierra */
+  let navEl = document.querySelector("nav");
+  let navToggle = document.querySelector(".nav-toggle");
+  if (navEl && navToggle) {
+    let setOpen = function (open) {
+      navEl.classList.toggle("open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    navToggle.addEventListener("click", function () {
+      setOpen(!navEl.classList.contains("open"));
+    });
+    navEl.querySelectorAll(".nav-links a").forEach(function (a) {
+      a.addEventListener("click", function () { setOpen(false); });
+    });
+  }
+
   /* Vídeos de testimonios: se descargan solo al pulsar (página más rápida) */
   document.querySelectorAll(".video-facade[data-video]").forEach(function (btn) {
     btn.addEventListener("click", function () {
