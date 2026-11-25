@@ -215,11 +215,15 @@
     });
   })();
 
-  /* Carrusel de testimonios: las flechas avanzan una columna; en móvil también se desliza con el dedo */
+  /* Carrusel de testimonios infinito: las flechas avanzan una columna; en móvil también se desliza con el dedo.
+     Se ponen copias de todas las tarjetas antes y después de las originales; al parar en una copia,
+     se salta sin animación a la tarjeta original equivalente, así nunca se llega a un extremo. */
   document.querySelectorAll("[data-testimonios]").forEach(function (root) {
     let track = root.querySelector(".testimonios-track");
     let prevBtn = root.querySelector("[data-testimonios-prev]");
     let nextBtn = root.querySelector("[data-testimonios-next]");
+    let cards = Array.prototype.slice.call(track.querySelectorAll(".testimonio"));
+    let n = cards.length;
 
     function step() {
       let card = track.querySelector(".testimonio");
@@ -227,24 +231,60 @@
       return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
     }
 
-    // Desactiva las flechas al llegar a un extremo y las oculta si caben todos
-    function updateButtons() {
-      let max = track.scrollWidth - track.clientWidth;
-      let hidden = max <= 1;
-      prevBtn.hidden = nextBtn.hidden = hidden;
-      prevBtn.disabled = track.scrollLeft <= 1;
-      nextBtn.disabled = track.scrollLeft >= max - 1;
+    if (n < 2) { prevBtn.hidden = nextBtn.hidden = true; return; }
+
+    // Copias (ocultas para lectores de pantalla y fuera del orden de tabulación)
+    function copy(card) {
+      let c = card.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      c.setAttribute("data-clone", "");
+      c.querySelectorAll("a, button").forEach(function (el) { el.tabIndex = -1; });
+      return c;
+    }
+    cards.forEach(function (card) { track.appendChild(copy(card)); });
+    cards.slice().reverse().forEach(function (card) { track.insertBefore(copy(card), track.firstChild); });
+
+    // Salto instantáneo (sin animación) de una copia a la original
+    function jump(delta) {
+      track.style.scrollBehavior = "auto";
+      track.scrollLeft += delta;
+      track.style.scrollBehavior = "";
     }
 
-    prevBtn.addEventListener("click", function () { track.scrollBy({ left: -step() }); });
-    nextBtn.addEventListener("click", function () { track.scrollBy({ left: step() }); });
+    // Mantiene la posición dentro del bloque de tarjetas originales
+    function recenter() {
+      let setW = n * step();
+      if (track.scrollLeft < setW - 1) jump(setW);
+      else if (track.scrollLeft >= 2 * setW - 1) jump(-setW);
+    }
+
+    let timer;
+    track.addEventListener("scroll", function () {
+      clearTimeout(timer);
+      timer = setTimeout(recenter, 150);
+    }, { passive: true });
+
+    function go(dir) {
+      recenter();
+      track.scrollBy({ left: dir * step() });
+    }
+
+    prevBtn.addEventListener("click", function () { go(-1); });
+    nextBtn.addEventListener("click", function () { go(1); });
     track.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft") { e.preventDefault(); track.scrollBy({ left: -step() }); }
-      if (e.key === "ArrowRight") { e.preventDefault(); track.scrollBy({ left: step() }); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+      if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
     });
-    track.addEventListener("scroll", updateButtons, { passive: true });
-    window.addEventListener("resize", updateButtons);
-    updateButtons();
+
+    // Empieza en la primera tarjeta original (y la recoloca si cambia el ancho)
+    let current = 0; // índice (0..n-1) de la primera tarjeta visible
+    function remember() {
+      current = ((Math.round(track.scrollLeft / step()) % n) + n) % n;
+    }
+    function goTo(i) { jump((n + i) * step() - track.scrollLeft); }
+    goTo(0);
+    track.addEventListener("scroll", function () { setTimeout(remember, 160); }, { passive: true });
+    window.addEventListener("resize", function () { goTo(current); });
   });
 
   /* Menú móvil: el botón abre/cierra los enlaces; al pulsar un enlace se cierra */
